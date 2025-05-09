@@ -1,4 +1,3 @@
-<!--
 Meeting 1: 05/01/25
 Attendees: Ashton, Divyalakshana, Esal, Franklin
 
@@ -18,4 +17,3 @@ Action items
 Divylakshana creates 1 page project outline as shown in M04 project details assignment 
 Everyone - Send in restaurant names in the slack as you think of them
 Define style guidelines (brainstorm for now and we can finalize when needed)
--->

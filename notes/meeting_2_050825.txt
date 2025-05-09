@@ -1,4 +1,3 @@
-<!--
 Meeting 2: 05/08/25
 Attendees: Ashton, Divyalakshana, Esal, Franklin
 Minutes taken by Divyalakshana.
@@ -26,5 +25,3 @@ Finish up all assignment requirements by Saturday 5 pm (05/10/2025)
 
 Next meeting: Monday [05/12/2025] by noon.
 Next Meeting Coordinator: Franklin
--->
-

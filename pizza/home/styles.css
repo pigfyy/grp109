@@ -1,0 +1,57 @@
+body {
+    background-color: #A8AF00;
+}
+
+/* Heading text */
+#feature {
+    text-align: center;
+}
+
+/* Main elements, contain pizza info */
+.pizza-item {
+    /* Styling */
+    background-color: #FAF9F7;
+    border-radius: 6%;
+
+    /* Positioning */
+    width: 75%;
+    height: 25em;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+.pizza-item img {
+    float: left;
+    height: 100%;
+}
+
+.pizza-item ul {
+    width: 80%
+}
+
+.pizza-item h1 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.pizza-item li {
+    font-size: 1.5em;
+    font-family: cursive, serif;
+}
+
+.pizza-item button {
+    /* Styling */
+    background-color: #D7AF54;
+    border-radius: 5%;
+
+    /* Positioning */
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    height: 15%;
+    width: 30%;
+}
+
+.pizza-item button:active {
+    background-color: #764F36;
+}

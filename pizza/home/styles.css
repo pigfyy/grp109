@@ -1,57 +1,73 @@
 body {
-    background-color: #A8AF00;
+  background-color: #a8af00;
+}
+
+/* Order confirmation styling */
+#order-confirmation {
+  background-color: #faf9f7;
+  text-align: center;
+  border: 2px solid #d7af54;
+  width: 75%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Remove default bullets from list styling */
+#order-confirmation ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Heading text */
 #feature {
-    text-align: center;
+  text-align: center;
 }
 
 /* Main elements, contain pizza info */
 .pizza-item {
-    /* Styling */
-    background-color: #FAF9F7;
-    border-radius: 6%;
+  /* Styling */
+  background-color: #faf9f7;
+  border-radius: 6%;
 
-    /* Positioning */
-    width: 75%;
-    height: 25em;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+  /* Positioning */
+  width: 75%;
+  height: 25em;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
 }
 
 .pizza-item img {
-    float: left;
-    height: 100%;
+  float: left;
+  height: 100%;
 }
 
 .pizza-item ul {
-    width: 80%
+  width: 80%;
 }
 
 .pizza-item h1 {
-    text-align: center;
-    padding-top: 1em;
+  text-align: center;
+  padding-top: 1em;
 }
 
 .pizza-item li {
-    font-size: 1.5em;
-    font-family: cursive, serif;
+  font-size: 1.5em;
+  font-family: cursive, serif;
 }
 
 .pizza-item button {
-    /* Styling */
-    background-color: #D7AF54;
-    border-radius: 5%;
+  /* Styling */
+  background-color: #d7af54;
+  border-radius: 5%;
 
-    /* Positioning */
-    float: right;
-    margin-right: 10%;
-    margin-bottom: 10%;
-    height: 15%;
-    width: 30%;
+  /* Positioning */
+  float: right;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  height: 15%;
+  width: 30%;
 }
 
 .pizza-item button:active {
-    background-color: #764F36;
+  background-color: #764f36;
 }

@@ -62,6 +62,7 @@ document
   .addEventListener("click", function () {
     const orderConfirmation = document.getElementById("order-confirmation");
     const orderItems = document.getElementById("order-items");
+    let total = 0;
 
     orderItems.innerHTML = "";
 
@@ -72,10 +73,17 @@ document
         const li = document.createElement("li");
         li.textContent = `${
           pizzaId.charAt(0).toUpperCase() + pizzaId.slice(1)
-        } Pizza`;
+        } Pizza - $${pizza.price}`;
         orderItems.appendChild(li);
+        total += pizza.price;
       }
     });
+
+    // create display for total price
+    const totalLi = document.createElement("li");
+    totalLi.style.fontWeight = "bold";
+    totalLi.textContent = `Total: $${total.toFixed(2)}`;
+    orderItems.appendChild(totalLi);
 
     // make the order confirmation visible
     orderConfirmation.style.display = "block";

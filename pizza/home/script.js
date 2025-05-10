@@ -56,38 +56,63 @@ buttons.forEach((button) => {
   });
 });
 
-// create functionality for "Submit order" button, handling showing order confirmation on click
+// handles both submitting order and allowing user to restart order
+function handleSubmitOrder() {
+  const orderConfirmation = document.getElementById("order-confirmation");
+  const orderItems = document.getElementById("order-items");
+  const menuArea = document.querySelector(".menu-area");
+  const submitButton = document.querySelector("#submit-order button");
+  let total = 0;
+
+  orderItems.innerHTML = "";
+
+  // create a list of the pizzas ordered by the user
+  currentOrder.forEach((pizzaId) => {
+    const pizza = pizzaMenu.find((p) => p.id === pizzaId);
+    if (pizza) {
+      const li = document.createElement("li");
+      li.textContent = `${
+        pizzaId.charAt(0).toUpperCase() + pizzaId.slice(1)
+      } Pizza - $${pizza.price}`;
+      orderItems.appendChild(li);
+      total += pizza.price;
+    }
+  });
+
+  // create display for total price
+  const totalLi = document.createElement("li");
+  totalLi.style.fontWeight = "bold";
+  totalLi.textContent = `Total: $${total.toFixed(2)}`;
+  orderItems.appendChild(totalLi);
+
+  // Hide menu area and show order confirmation
+  if (menuArea) {
+    menuArea.style.display = "none";
+  }
+  orderConfirmation.style.display = "block";
+
+  // replace submit button with restart button (remove submitOrder handler and instead create a function that handles resetting the order)
+  submitButton.textContent = "Restart Order";
+  submitButton.removeEventListener("click", handleSubmitOrder);
+  submitButton.addEventListener("click", function () {
+    // reset visibility of order confirmation and menu area
+    orderConfirmation.style.display = "none";
+    if (menuArea) {
+      menuArea.style.display = "block";
+    }
+    submitButton.textContent = "Submit Order";
+    currentOrder = [];
+
+    // remove new handler and replace it with handleSubmitOrder
+    submitButton.removeEventListener("click", arguments.callee);
+    submitButton.addEventListener("click", handleSubmitOrder);
+  });
+
+  // clear current order
+  currentOrder = [];
+}
+
+// attach event to submit order button (function is extracted to be able to easily remove and reattach the handler within the eventListener)
 document
   .querySelector("#submit-order button")
-  .addEventListener("click", function () {
-    const orderConfirmation = document.getElementById("order-confirmation");
-    const orderItems = document.getElementById("order-items");
-    let total = 0;
-
-    orderItems.innerHTML = "";
-
-    // create a list of the pizzas ordered by the user
-    currentOrder.forEach((pizzaId) => {
-      const pizza = pizzaMenu.find((p) => p.id === pizzaId);
-      if (pizza) {
-        const li = document.createElement("li");
-        li.textContent = `${
-          pizzaId.charAt(0).toUpperCase() + pizzaId.slice(1)
-        } Pizza - $${pizza.price}`;
-        orderItems.appendChild(li);
-        total += pizza.price;
-      }
-    });
-
-    // create display for total price
-    const totalLi = document.createElement("li");
-    totalLi.style.fontWeight = "bold";
-    totalLi.textContent = `Total: $${total.toFixed(2)}`;
-    orderItems.appendChild(totalLi);
-
-    // make the order confirmation visible
-    orderConfirmation.style.display = "block";
-
-    // clear current order
-    currentOrder = [];
-  });
+  .addEventListener("click", handleSubmitOrder);

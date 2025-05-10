@@ -55,3 +55,31 @@ buttons.forEach((button) => {
     }
   });
 });
+
+// create functionality for "Submit order" button, handling showing order confirmation on click
+document
+  .querySelector("#submit-order button")
+  .addEventListener("click", function () {
+    const orderConfirmation = document.getElementById("order-confirmation");
+    const orderItems = document.getElementById("order-items");
+
+    orderItems.innerHTML = "";
+
+    // create a list of the pizzas ordered by the user
+    currentOrder.forEach((pizzaId) => {
+      const pizza = pizzaMenu.find((p) => p.id === pizzaId);
+      if (pizza) {
+        const li = document.createElement("li");
+        li.textContent = `${
+          pizzaId.charAt(0).toUpperCase() + pizzaId.slice(1)
+        } Pizza`;
+        orderItems.appendChild(li);
+      }
+    });
+
+    // make the order confirmation visible
+    orderConfirmation.style.display = "block";
+
+    // clear current order
+    currentOrder = [];
+  });

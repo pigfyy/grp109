@@ -55,11 +55,17 @@ body {
   font-family: cursive, serif;
 }
 
-.pizza-item button {
+.order-button {
   /* Styling */
   background-color: #d7af54;
   border-radius: 5%;
+}
 
+.order-button:active {
+  background-color: #764f36;
+}
+
+.pizza-item button {
   /* Positioning */
   float: right;
   margin-right: 10%;
@@ -68,6 +74,14 @@ body {
   width: 30%;
 }
 
-.pizza-item button:active {
-  background-color: #764f36;
+#submit-order {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#submit-order button {
+  /* Positioning */
+  height: 40px;
+  width: 200px;
+  font-size: 1.2em;
 }

@@ -62,9 +62,20 @@ function handleSubmitOrder() {
   const orderItems = document.getElementById("order-items");
   const menuArea = document.querySelector(".menu-area");
   const submitButton = document.querySelector("#submit-order button");
+  const customerName = document.getElementById("customer-name").value;
+  const customerAddress = document.getElementById("customer-address").value;
   let total = 0;
 
+  if (!customerName || !customerAddress) {
+    alert("Please enter your name and delivery address");
+    return;
+  }
+
   orderItems.innerHTML = "";
+
+  const deliveryInfo = document.createElement("p");
+  deliveryInfo.textContent = `Delivery to: ${customerName} at ${customerAddress}`;
+  orderItems.appendChild(deliveryInfo);
 
   // create a list of the pizzas ordered by the user
   currentOrder.forEach((pizzaId) => {

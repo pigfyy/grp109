@@ -86,3 +86,17 @@ body {
   width: 200px;
   font-size: 1.2em;
 }
+
+#user-details {
+  text-align: center;
+  margin: 20px auto;
+  width: 75%;
+}
+
+#user-details input {
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #d7af54;
+  border-radius: 5px;
+}

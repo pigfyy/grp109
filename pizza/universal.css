@@ -1,53 +1,53 @@
 header {
-    background-color: #58314A;
-    color: #FAF9F7;
-    text-align: center;
-    width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
+  background-color: #58314a;
+  color: #faf9f7;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header h1 {
-		font-family: 'AucaRegular';
-		font-weight: normal;
-		font-style: normal;
-		font-size: 2.5em;
-		color: floralwhite;
+  font-family: "AucaRegular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.5em;
+  color: floralwhite;
 }
 
 header a {
-	color: #764F36;
-	text-decoration: none;
+  color: #764f36;
+  text-decoration: none;
 }
 
 nav {
-    background-color: white;
-	display: flex;
-	justify-content: center;
-	color: #764F36;
-	padding: 0px;
-	text-align: left;
-	margin: 0%;
-	height: 60px;
-	font-size: 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  color: #764f36;
+  padding: 0px;
+  text-align: left;
+  margin: 0%;
+  height: 60px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 nav ul li {
-	display: inline;
-	padding: 0.5em;
+  display: inline;
+  padding: 0.5em;
 }
 
 main {
-	margin-top: 12em; /* Prevents overlap with header */
+  margin-top: 12em;
 }
 
 footer {
-	background-color: #58314A;
-	box-sizing: border-box;
-	color: #FAF9F7;
-	text-align: center;
-	width: 100%;
-	bottom: 0;
+  background-color: #58314a;
+  box-sizing: border-box;
+  color: #faf9f7;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
 }

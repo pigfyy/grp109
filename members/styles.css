@@ -1,21 +1,17 @@
 body {
   background-color: #a8af00;
 }
-
-main {
-  margin-top: 12em;
-}
-
 .member-selector {
   background-color: #faf9f7;
   width: 75%;
-  margin: 20px auto;
+  margin-top: 12em;
+  margin-right: auto;
+  margin-left: auto;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .member-selector label {
   font-size: 1.2em;
   margin-right: 10px;

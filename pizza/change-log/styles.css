@@ -30,7 +30,7 @@
 }
 
 .member1-name {
-	color: #1565c0;
+	color: #104a8b;
 	font-weight: bold;
 	margin: 2%;
 }
@@ -46,7 +46,7 @@
 }
 
 .member2-name {
-	color: #2e7d32;
+	color: #235c26;
 	font-weight: bold;
 	margin: 2%;
 }
@@ -62,7 +62,7 @@
 }
 
 .member3-name {
-	color: #7b1fa2;
+	color: #6d1d8f;
 	font-weight: bold;
 	margin: 2%;
 }
@@ -78,7 +78,7 @@
 }
 
 .member4-name {
-	color: #ef6c00;
+	color: #833b00;
 	font-weight: bold;
 	margin: 2%;
 }
@@ -89,4 +89,14 @@
 
 ul {
 	margin: 2%;
+}
+
+.accessibility-verification {
+	background-color: #d0e6e4;
+	border-left-style: solid;
+	border-left-width: 5px;
+	border-left-color: #385555;
+	border-radius: 5px;
+	margin: 2%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

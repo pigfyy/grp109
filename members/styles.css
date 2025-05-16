@@ -1,6 +1,8 @@
 body {
   background-color: #a8af00;
+  line-height: 1.5em;
 }
+
 .member-selector {
   background-color: #faf9f7;
   width: 75%;

@@ -1,6 +1,53 @@
-/* Added background color style just to check javascript function - please remove or change to your own style */
 body {
-	background-color: #A8AF00;
+	background-color: wheat;
 }
 
-#ashton-info {}
+/* Each section should have a border and a barrier */
+section {
+	border: 1px solid rgb(190, 173, 142);
+	margin: 10px;
+	padding: 10px;
+}
+
+/* All of these just align the sections on the left or right */
+#intro .primary-block {
+	float: left;
+}
+
+#intro .secondary-block {
+	float: right;
+}
+
+#music .primary-block {
+	float: right;
+}
+
+#music .secondary-block {
+	float: left;
+}
+
+/* The largest block, typically text, takes up 60% of the screen */
+.primary-block {
+	width: 60%;
+}
+
+/* When the primary block contains text, it should be inset from the right edge*/
+.primary-block p {
+	padding-right: 3px;
+}
+
+/* The smaller block takes up the remaining 40% */
+.secondary-block {
+	width: 40%;
+}
+
+/* When the secondary block contains images, they should have some space between them */
+.secondary-block img {
+	width: 45%;
+	padding: 3px;
+}
+
+/* Each image in a photo line should be the same width */
+.photo-line img {
+	width: 19.5%;
+}

@@ -1,70 +1,70 @@
 body {
-	background-color: wheat;
+  background-color: wheat;
 }
 
 /* Each section should have a border and a barrier */
 section {
-	border: 1px solid rgb(190, 173, 142);
-	margin: 10px;
-	padding: 10px;
+  border: 1px solid rgb(190, 173, 142);
+  margin: 10px;
+  padding: 10px;
 }
 
 /* All of these just align the sections on the left or right */
 #intro .primary-block {
-	float: left;
+  float: left;
 }
 
 #intro .secondary-block {
-	float: right;
+  float: right;
 }
 
 #music .primary-block {
-	float: right;
+  float: right;
 }
 
 #music .secondary-block {
-	float: left;
+  float: left;
 }
 
 /* The largest block, typically text, takes up 60% of the screen */
 .primary-block {
-	width: 60%;
+  width: 60%;
 }
 
 /* When the primary block contains text, it should be inset from the right edge*/
 .primary-block p {
-	padding-right: 3px;
+  padding-right: 3px;
 }
 
 /* The smaller block takes up the remaining 40% */
 .secondary-block {
-	width: 40%;
+  width: 40%;
 }
 
 /* When the secondary block contains images, they should have some space between them */
 .secondary-block img {
-	width: 45%;
-	padding: 3px;
+  width: 45%;
+  padding: 3px;
 }
 
 /* #music has link-images, so they need to be floated to make the link the right size*/
 #music a {
-	float: left;
-	width: 50%;
+  float: left;
+  width: 50%;
 }
 
 /* The default secondary block image width won't work because the width was shrunken in the last rule */
 #music img {
-	width: 90%;
+  width: 90%;
 }
 
 /* Each image in a photo line should be floated and take up 1/5 of the screen */
 .photo-line a {
-	float: left;
-	width: 20%;
+  float: left;
+  width: 20%;
 }
 
 /* Each image in a photo line should be the same width */
 .photo-line img {
-	width: 90%;
+  width: 90%;
 }

@@ -1,14 +1,13 @@
-
 .wrapper {
-display: flex;
-flex-direction: column;
-min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
 }
 
 .week-container {
-  background-color:#e8e6df;
+  background-color: #e8e6df;
   padding: 10px;
-  margin:5%;
+  margin: 5%;
   border-radius: 10px;
 }
 
@@ -16,23 +15,25 @@ min-height: 80vh;
   background-color: #a2402a;
   border-radius: 5px;
   padding: 1px;
-  margin:2%;
+  margin: 2%;
   text-align: center;
 }
 .html-validation {
   background-color: #fafaf5;
   border-left-style: solid;
   border-left-width: 5px;
-  border-left-color: #D7AF54;
+  border-left-color: #d7af54;
   border-radius: 5px;
   margin: 2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .due-date {
   color: #114e94;
   font-weight: bold;
-  margin:2%;
+  margin: 2%;
 }
 
 .css-validation {
@@ -42,21 +43,22 @@ min-height: 80vh;
   border-left-color: #1565c0;
   border-radius: 5px;
   margin: 2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #iteration1 h2 {
-  color: #FAF9F7;
+  color: #faf9f7;
 }
 
 ul {
   margin: 2%;
 }
 .validation-results {
-
 }
 .validation-results img {
   border-radius: 0px;
-  height:60%;
+  height: 60%;
   width: 80%;
   object-fit: cover;
 }

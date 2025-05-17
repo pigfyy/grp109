@@ -16,6 +16,6 @@ function displayInfo() {
 
   //change the css file based on selected value
   var styleLink = document.getElementById("member-css");
-  styleLink.href = `./css/${selectedValue}.css`;
+  styleLink.href = `../css/members/individual/${selectedValue}.css`;
   console.log(styleLink.href);
 }

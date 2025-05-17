@@ -25,9 +25,7 @@
   border-left-color: #d7af54;
   border-radius: 5px;
   margin: 2%;
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .due-date {
@@ -43,9 +41,7 @@
   border-left-color: #1565c0;
   border-radius: 5px;
   margin: 2%;
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #iteration1 h2 {
   color: #faf9f7;
@@ -54,8 +50,7 @@
 ul {
   margin: 2%;
 }
-.validation-results {
-}
+
 .validation-results img {
   border-radius: 0px;
   height: 60%;

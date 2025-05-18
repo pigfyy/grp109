@@ -66,16 +66,10 @@ body {
   margin: 1.5rem 0;
 }
 
-/* adding rounding to images and transition so that the hover effect is smoother */
+/* adding rounding to images */
 .image-container img {
   border-radius: 6px;
-  transition: transform 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* hover effect for images */
-.image-container img:hover {
-  transform: translateY(-3px);
 }
 
 /* styling for intro section, adds left bordering to make it stand out more */
@@ -165,16 +159,10 @@ body {
   justify-content: center;
 }
 
-/* images are set to a static size with same image hover effect as before */
+/* images are set to a static size */
 .tech-icons img {
   width: 50px;
   height: 50px;
-  transition: transform 0.2s ease;
-}
-
-/* image hover effect for tech icons */
-.tech-icons img:hover {
-  transform: translateY(-5px);
 }
 
 /* projects section, the two cards both have their own column */
@@ -193,21 +181,11 @@ body {
   padding: 1.5rem;
 }
 
-.project-card h4 {
-  margin-top: 0;
-  color: #333;
-}
-
-/* adding a hover effect to the link for ux*/
+/* styling for project links */
 .project-link {
   display: inline-block;
   margin-top: 1rem;
   color: #666;
   text-decoration: none;
   font-weight: 500;
-}
-
-/* hover effect */
-.project-link:hover {
-  color: #333;
 }

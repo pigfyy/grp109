@@ -22,6 +22,7 @@ For the purpose of sharing a consistent "theming" across pages, we'll use the fo
       <li>
         <a href="/grp109/pizza/validation-tracker/">Validation Tracker</a>
       </li>
+      <li><a href="/grp109/members/">Team Members</a></li>
     </ul>
   </nav>
 </header>

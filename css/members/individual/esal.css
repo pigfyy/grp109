@@ -11,8 +11,8 @@ body {
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 50px rgba(88, 49, 74, 0.3);
+  overflow: hidden;
 }
 /*Headers*/
 #esal h1, #esal h2, #esal h4 {
@@ -56,14 +56,16 @@ body {
 }
 #esal .image-block img {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
+  height: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 /*Add a hover effect to images, for more interactiveness*/
 #esal .image-block img:hover {
   transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 

@@ -1,12 +1,213 @@
-#franklin-background {
-  background-color: #faf9f7;
-  width: 75%;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
+/* changing background color for my page */
+body {
+  background-color: rgb(213, 223, 226);
+  color: #2f2f2f;
+  line-height: 1.6;
 }
 
+/* setting max width so that the content on my page isn't overly wide */
 #franklin {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* styling for each section, with white background and box-shadow to make it stand out better */
+#franklin section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* styling for different heading and text sizes */
+#franklin h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#franklin h2 {
+  font-size: 1.8rem;
+  color: #444;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+#franklin h3 {
+  font-size: 1.4rem;
+  color: #555;
+  margin: 1.2rem 0;
+  font-weight: 500;
+}
+
+#franklin h4 {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+#franklin p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* styling for containers that have images in them */
+.image-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+}
+
+/* adding rounding to images and transition so that the hover effect is smoother */
+.image-container img {
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* hover effect for images */
+.image-container img:hover {
+  transform: translateY(-3px);
+}
+
+/* styling for intro section, adds left bordering to make it stand out more */
+#franklin-intro {
+  border-left: 4px solid #666;
+}
+
+/* intro content uses flex so that the text and images are horizontally side by side */
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.intro-text {
+  flex: 0 1 40%;
+  max-width: 500px;
+}
+
+/* makes the images be on the right side of the container and have a gap between them */
+#franklin-intro .image-container {
+  flex: 0 1 60%;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+/* styling for the images, making them 300px tall and having them be the same width as each other */
+#franklin-intro .image-container img {
+  height: 300px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+/* hobby section styling */
+.hobby-section {
+  margin-bottom: 3rem;
+}
+
+/* hobby content is similar to intro styling, side-by-side text and images */
+.hobby-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.hobby-text {
+  flex: 0 1 40%;
+  max-width: 500px;
+}
+
+.hobby-section .hobby-content .image-container {
+  flex: 0 1 60%;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.hobby-section .hobby-content .image-container img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* travel images are styled to be side by side and fill out the width of the container */
+.travel-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.travel-images img {
+  flex: 1;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* tech section, the icons are side by side with a gap between them */
+.tech-icons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+/* images are set to a static size with same image hover effect as before */
+.tech-icons img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+/* image hover effect for tech icons */
+.tech-icons img:hover {
+  transform: translateY(-5px);
+}
+
+/* projects section, the two cards both have their own column */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* project card styling, has a background color and a border */
+.project-card {
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.project-card h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* adding a hover effect to the link for ux*/
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* hover effect */
+.project-link:hover {
+  color: #333;
 }

@@ -1,6 +1,69 @@
 /* Added background color style just to check javascript function - please remove or change to your own style */
 body {
   background-color: #d7af54;
+  color: #2f2f2f;
+  line-height: 1.6;
 }
+/*Main box*/
 #esal {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 50px rgba(88, 49, 74, 0.3);
 }
+/*Headers*/
+#esal h1, #esal h2, #esal h4 {
+  color: #8B5E3C;
+  border-bottom: 2px solid #d8cfc4;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+#esal h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#esal h2 {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+}
+#esal h4 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+/*all paragraphs*/
+#esal p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #444;
+  line-height: 1.7;
+}
+/*all blocks' borders*/
+#esal .intro,
+#esal .text-block,
+#esal .image-block {
+  margin-bottom: 2rem;
+}
+/* Display images using CSS grid*/
+#esal .image-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+#esal .image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+/*Add a hover effect to images, for more interactiveness*/
+#esal .image-block img:hover {
+  transform: scale(1.03);
+}
+

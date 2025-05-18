@@ -3,3 +3,44 @@ body {
 }
 #divya {
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  color: #764F36;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f2ecda;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content.reverse {
+  flex-direction: row-reverse;
+}
+
+.content img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content p {
+  flex: 1;
+  font-size: 16px;
+  line-height:1.5em;
+  width: 350px;
+}
+
+h1 {
+  text-align: center;
+  color: #764F36;
+}
+

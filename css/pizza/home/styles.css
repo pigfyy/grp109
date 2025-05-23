@@ -2,6 +2,18 @@ body {
   background-color: #a8af00;
 }
 
+/* code to remove the automatic increment decrement buttons on the input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* Order confirmation styling */
 #order-confirmation {
   background-color: #faf9f7;
@@ -31,26 +43,42 @@ body {
   border-radius: 6%;
 
   /* Positioning */
+  display: flex;
+  align-items: center;
   width: 75%;
   height: 25em;
   margin-left: 12.5%;
   margin-right: 12.5%;
+  margin-bottom: 2em;
+  padding: 1em;
 }
 
+/* styles pizza details */
+.pizza-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+/* makes sure that images are not stretched */
 .pizza-item img {
-  float: left;
   height: 100%;
 }
 
+/* styles the ul with all the pizza details inside of it, setting a max width too to make sure that the order buttons have space */
 .pizza-item ul {
-  width: 80%;
+  padding-left: 0;
+  max-width: 25em;
 }
 
+/* adds margin bottom to pizza heading so that it's adquately seperated from the details */
 .pizza-item h1 {
-  text-align: center;
-  padding-top: 1em;
+  text-align: left;
+  margin-bottom: 0.5em;
 }
 
+/* setting font for pizza details */
 .pizza-item li {
   font-size: 1.5em;
   font-family: cursive, serif;
@@ -66,13 +94,43 @@ body {
   background-color: #764f36;
 }
 
-.pizza-item button {
-  /* Positioning */
-  float: right;
+/* aligns the order controls to the right */
+.order-controls {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
   margin-right: 10%;
-  margin-bottom: 10%;
-  height: 15%;
-  width: 30%;
+  max-width: 10rem;
+}
+
+.quantity-selector {
+  display: flex;
+  width: 100%;
+}
+
+/* the quallity input takes up as much width as the other two buttons leave for it */
+.quantity-selector .quantity-input {
+  width: 100%;
+  text-align: center;
+  margin: 0 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* the quantity buttons need to be a square */
+.quantity-selector .quantity-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 4rem;
+}
+
+/* adds different color when the button is actively pressed */
+.quantity-selector .quantity-btn:active {
+  background-color: #ddd;
 }
 
 #submit-order {

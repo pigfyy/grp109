@@ -27,34 +27,53 @@ const pizzaMenu = [
   },
 ];
 
-function addToOrder(pizzaId) {
-  // only add to order array if pizzaId doesn't already exist, as we don't handle multiple orders of the same pizza yet
-  if (!currentOrder.includes(pizzaId)) {
-    currentOrder.push(pizzaId);
-  }
-}
+// each quantity selector gets the same event handler which checks for clicks on its corresponding minus and plus buttons to increment and decrement the amount of each pizza ordered by the user
+document.querySelectorAll(".quantity-selector").forEach((selector) => {
+  const minusBtn = selector.querySelector(".minus-btn");
+  const plusBtn = selector.querySelector(".plus-btn");
+  const input = selector.querySelector(".quantity-input");
 
-function getCurrentOrder() {
-  return currentOrder;
-}
+  // handles increasing
+  plusBtn.addEventListener("click", () => {
+    let value = parseInt(input.value) || 0;
+    input.value = value + 1;
+    updateOrder(selector);
+  });
 
-const buttons = document.querySelectorAll(".pizza-item button");
-
-// create functionality for "Add to order" button, binding an onClick listener to each button
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    // access closest h1 to get food item name
-    const pizzaItem = this.closest(".pizza-item");
-    const pizzaName = pizzaItem.querySelector("h1").textContent.toLowerCase();
-    const pizza = pizzaMenu.find((p) => p.id === pizzaName);
-
-    // if accessed name exists in pizzaMenu, call addToOrder with pizza.id
-    if (pizza) {
-      addToOrder(pizza.id);
-      console.log("Current order:", getCurrentOrder());
+  // handles decreasing
+  minusBtn.addEventListener("click", () => {
+    let value = parseInt(input.value) || 0;
+    if (value > 0) {
+      input.value = value - 1;
+      updateOrder(selector);
     }
   });
+
+  // handles when the user manually changes the quantity input by typing it in
+  input.addEventListener("change", () => {
+    let value = parseInt(input.value) || 0;
+    if (value < 0) value = 0;
+    input.value = value;
+    updateOrder(selector);
+  });
 });
+
+// update order utility function, handles adding and removing pizzas from the currentOrder array
+function updateOrder(selector) {
+  const pizzaItem = selector.closest(".pizza-item");
+  const pizzaName = pizzaItem.querySelector("h1").textContent.toLowerCase();
+  const quantity =
+    parseInt(selector.querySelector(".quantity-input").value) || 0;
+
+  currentOrder = currentOrder.filter((item) => item.id !== pizzaName);
+
+  if (quantity > 0) {
+    currentOrder.push({
+      id: pizzaName,
+      quantity: quantity,
+    });
+  }
+}
 
 // handles both submitting order and allowing user to restart order
 function handleSubmitOrder() {
@@ -78,15 +97,17 @@ function handleSubmitOrder() {
   orderItems.appendChild(deliveryInfo);
 
   // create a list of the pizzas ordered by the user
-  currentOrder.forEach((pizzaId) => {
-    const pizza = pizzaMenu.find((p) => p.id === pizzaId);
+  currentOrder.forEach((orderItem) => {
+    const pizza = pizzaMenu.find((p) => p.id === orderItem.id);
     if (pizza) {
       const li = document.createElement("li");
-      li.textContent = `${
-        pizzaId.charAt(0).toUpperCase() + pizzaId.slice(1)
-      } Pizza - $${pizza.price}`;
+      // calculates and shows the amount of every pizza ordered too
+      const itemTotal = pizza.price * orderItem.quantity;
+      li.textContent = `${orderItem.quantity}x ${
+        orderItem.id.charAt(0).toUpperCase() + orderItem.id.slice(1)
+      } Pizza - $${itemTotal.toFixed(2)}`;
       orderItems.appendChild(li);
-      total += pizza.price;
+      total += itemTotal;
     }
   });
 
@@ -96,7 +117,7 @@ function handleSubmitOrder() {
   totalLi.textContent = `Total: $${total.toFixed(2)}`;
   orderItems.appendChild(totalLi);
 
-  // Hide menu area and show order confirmation
+  // hide menu area and show order confirmation
   if (menuArea) {
     menuArea.style.display = "none";
   }
@@ -112,7 +133,13 @@ function handleSubmitOrder() {
       menuArea.style.display = "block";
     }
     submitButton.textContent = "Submit Order";
+
     currentOrder = [];
+
+    // reset all quantity inputs
+    document.querySelectorAll(".quantity-input").forEach((input) => {
+      input.value = 0;
+    });
 
     // remove new handler and replace it with handleSubmitOrder
     submitButton.removeEventListener("click", arguments.callee);

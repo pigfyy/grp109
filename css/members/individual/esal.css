@@ -48,26 +48,15 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Display images using CSS grid
 #esal .image-block {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
-*/
 
 #esal .image-block img {
-  width: 40%;
+  width: 100%;
   height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-/*Add a hover effect to images, for more interactiveness*/
-#esal .image-block img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 

@@ -33,7 +33,21 @@
     </header>
 
     <main>
-      <!-- Header for the menu to let user enter information about themselves -->
+      <!-- Order now button -->
+      <div id="order-now">
+        <button class="order-now-button">Order now</button>
+      </div>
+      
+      <!-- Modal pop-up -->
+      <div id="overlay"></div>
+
+      <div id="order-modal">
+        <p>Would you like pick up or delivery?</p>
+        <button id="pickup-button">Pick Up</button>
+        <button id="delivery-button">Delivery</button>
+      </div>
+    
+      <!-- Header for the menu to let the user enter information about themselves -->
       <div id="user-details">
         <input
           type="text"
@@ -41,6 +55,8 @@
           placeholder="Your Name"
           required
         />
+      </div>
+      <div id="address-details">
         <input
           type="text"
           id="customer-address"
@@ -48,16 +64,7 @@
           required
         />
       </div>
-      <div id="submit-order">
-        <button class="order-button">Submit order</button>
-      </div>
-
-      <div id="order-confirmation">
-        <h2>Thank you for your order!</h2>
-        <ul id="order-items"></ul>
-        <p>will arrive soon!</p>
-      </div>
-
+      
       <!-- Menu -->
       <div class="menu-area">
         <div id="feature">
@@ -192,8 +199,19 @@
           </div>
         </div>
       </div>
-    </main>
+      
+      </div>
+      <div id="submit-order">
+        <button class="order-button">Submit order</button>
+      </div>
 
+      <div id="order-confirmation">
+        <h2>Thank you for your order!</h2>
+        <ul id="order-items"></ul>
+        <p>will arrive soon!</p>
+      </div>
+    </main>
+    
     <footer>
       <p>&copy; 2025 Artisanal Slice. All rights reserved.</p>
       <!--Footer found at the bottom of most pizza websites-->

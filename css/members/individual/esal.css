@@ -48,15 +48,14 @@ body {
   margin-bottom: 2rem;
 }
 
-#esal .image-block {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
 #esal .image-block img {
   width: 100%;
+  max-width: 250px; /* or 300px */
   height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
 

@@ -205,8 +205,18 @@ input[type="number"] {
 }
 
 /* Address box */
-#address-details {
-  display: none;
+#address-field {
+  text-align: center;
+  margin: 20px auto;
+  width: 75%;
+}
+
+#address-field input {
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #d7af54;
+  border-radius: 5px;
 }
 /* Style for Online Table Reservation button ---> Added by Divyalakshana */
 .modal {

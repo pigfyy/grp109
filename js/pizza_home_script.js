@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     orderType = "pickup";
     document.getElementById("address-field").style.display = "none";
     addressField.disabled = true;
+    orderNowBtn.textContent = "Pickup Selected";
     closeOrderModal();
   });
 
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     orderType = "delivery";
     document.getElementById("address-field").style.display = "block";
     addressField.disabled = false;
+    orderNowBtn.textContent = "Delivery Selected";
     closeOrderModal();
   });
 
@@ -96,6 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const orderItems = document.getElementById("order-items");
     const menuArea = document.querySelector(".menu-area");
     const submitButton = document.querySelector("#submit-order button");
+    const userDetails = document.getElementById("user-details");
+    const addressField = document.getElementById("address-field");
     const customerName = document.getElementById("customer-name").value;
     const customerAddress = document.getElementById("customer-address").value;
     let total = 0;
@@ -148,34 +152,49 @@ document.addEventListener("DOMContentLoaded", function () {
     totalLi.textContent = `Total: $${total.toFixed(2)}`;
     orderItems.appendChild(totalLi);
 
-    // hide menu area and show order confirmation
+    // hide menu area, user inputs, submit button and show order confirmation
     if (menuArea) {
       menuArea.style.display = "none";
     }
+    userDetails.style.display = "none";
+    addressField.style.display = "none";
+    document.getElementById("submit-order").style.display = "none";
     orderConfirmation.style.display = "block";
 
-    // replace submit button with restart button (remove submitOrder handler and instead create a function that handles resetting the order)
-    submitButton.textContent = "Restart Order";
-    submitButton.removeEventListener("click", handleSubmitOrder);
-    submitButton.addEventListener("click", function () {
-      // reset visibility of order confirmation and menu area
+    // create restart button below order confirmation
+    const restartBtn = document.createElement("button");
+    restartBtn.textContent = "Restart Order";
+    restartBtn.className = "order-button";
+    restartBtn.style.marginTop = "20px";
+    orderConfirmation.appendChild(restartBtn);
+
+    restartBtn.addEventListener("click", function () {
+      // reset visibility of all sections
       orderConfirmation.style.display = "none";
       if (menuArea) {
         menuArea.style.display = "block";
       }
-      submitButton.textContent = "Submit Order";
+      userDetails.style.display = "block";
+
+      if (orderType === "delivery") {
+        addressField.style.display = "block";
+      }
+      document.getElementById("submit-order").style.display = "block";
 
       currentOrder = [];
       orderType = null; // Reset order type
+      orderNowBtn.textContent = "Choose Order Type"; // Reset order button text
 
       // reset all quantity inputs
       document.querySelectorAll(".quantity-input").forEach((input) => {
         input.value = 0;
       });
 
-      // remove new handler and replace it with handleSubmitOrder
-      submitButton.removeEventListener("click", arguments.callee);
-      submitButton.addEventListener("click", handleSubmitOrder);
+      // reset, including removing the button and clearing the inputs
+      document.getElementById("customer-name").value = "";
+      document.getElementById("customer-address").value = "";
+
+      restartBtn.remove();
     });
 
     // clear current order

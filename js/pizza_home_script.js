@@ -1,6 +1,7 @@
 // pizza_home_script.js
 
 let currentOrder = [];
+let orderType = null;
 
 const pizzaMenu = [
   { id: "cheese", price: 9.99 },
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle pickup selection
   pickupBtn.addEventListener("click", function () {
+    orderType = "pickup";
     document.getElementById("address-field").style.display = "none";
     addressField.disabled = true;
     closeOrderModal();
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle delivery selection
   deliveryBtn.addEventListener("click", function () {
+    orderType = "delivery";
     document.getElementById("address-field").style.display = "block";
     addressField.disabled = false;
     closeOrderModal();
@@ -97,16 +100,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const customerAddress = document.getElementById("customer-address").value;
     let total = 0;
 
-    if (!customerName || !customerAddress) {
-      alert("Please enter your name and delivery address");
+    // validates while considering order type (no need for address if pickup)
+    if (!customerName) {
+      alert("Please enter your name");
+      return;
+    }
+
+    if (orderType === "delivery" && !customerAddress) {
+      alert("Please enter your delivery address");
+      return;
+    }
+
+    if (orderType === null) {
+      alert("Please select pickup or delivery first");
       return;
     }
 
     orderItems.innerHTML = "";
 
-    const deliveryInfo = document.createElement("p");
-    deliveryInfo.textContent = `Delivery to: ${customerName} at ${customerAddress}`;
-    orderItems.appendChild(deliveryInfo);
+    // changes the text based on whether pickup or delivery
+    const orderTypeInfo = document.createElement("p");
+    if (orderType === "pickup") {
+      orderTypeInfo.textContent = `Pickup for: ${customerName}`;
+    } else {
+      orderTypeInfo.textContent = `Delivery to: ${customerName} at ${customerAddress}`;
+    }
+    orderItems.appendChild(orderTypeInfo);
 
     // create a list of the pizzas ordered by the user
     currentOrder.forEach((orderItem) => {
@@ -147,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitButton.textContent = "Submit Order";
 
       currentOrder = [];
+      orderType = null; // Reset order type
 
       // reset all quantity inputs
       document.querySelectorAll(".quantity-input").forEach((input) => {

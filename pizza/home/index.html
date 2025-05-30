@@ -37,7 +37,7 @@
       <div id="order-now">
         <button class="order-now-button">Order now</button>
       </div>
-      
+
       <!-- Modal pop-up -->
       <div id="overlay"></div>
 
@@ -58,41 +58,29 @@
           <span class="close" onclick="closeReservation()">&times;</span>
           <h2>Welcome to Artisanal Slice</h2>
           <form id="reservationForm">
-            <label>Name:</label><br>
-            <input type="text" id="reservationName" required><br><br>
+            <label>Name:</label><br />
+            <input type="text" id="reservationName" required /><br /><br />
 
-            <label>Date:</label><br>
-            <input type="date" id="reservationDate" required><br><br>
+            <label>Date:</label><br />
+            <input type="date" id="reservationDate" required /><br /><br />
 
-            <label>Number of People:</label><br>
-            <input type="number" id="reservationPeople" min="1" max="20" required><br><br>
+            <label>Number of People:</label><br />
+            <input
+              type="number"
+              id="reservationPeople"
+              min="1"
+              max="20"
+              required
+            /><br /><br />
 
             <button type="submit">Confirm Reservation</button>
           </form>
 
-          <div id="confirmationMessage" style="display:none;"></div>
+          <div id="confirmationMessage" style="display: none"></div>
         </div>
       </div>
       <!-- End of Online Table Reservation -->
-    
-      <!-- Header for the menu to let the user enter information about themselves -->
-      <div id="user-details">
-        <input
-          type="text"
-          id="customer-name"
-          placeholder="Your Name"
-          required
-        />
-      </div>
-      </div>
-      <div id="address-field">
-        <input 
-           type="text" 
-           id="customer-address" 
-          placeholder="Address"
-         />
-      </div>
-      
+
       <!-- Menu -->
       <div class="menu-area">
         <div id="feature">
@@ -227,8 +215,20 @@
           </div>
         </div>
       </div>
-      
+
+      <!-- User details moved below menu -->
+      <div id="user-details">
+        <input
+          type="text"
+          id="customer-name"
+          placeholder="Your Name"
+          required
+        />
       </div>
+      <div id="address-field">
+        <input type="text" id="customer-address" placeholder="Address" />
+      </div>
+
       <div id="submit-order">
         <button class="order-button">Submit order</button>
       </div>
@@ -239,7 +239,7 @@
         <p>will arrive soon!</p>
       </div>
     </main>
-    
+
     <footer>
       <p>&copy; 2025 Artisanal Slice. All rights reserved.</p>
       <!--Footer found at the bottom of most pizza websites-->

@@ -1,4 +1,4 @@
-// add js here
+// Member script added by Divyalakshana
 function displayInfo() {
   var select = document.getElementById("member-dropdown");
 

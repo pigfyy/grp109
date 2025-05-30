@@ -1,7 +1,8 @@
-// pizza_home_script.js
+// original pizza home script added by Franklin, later modified by other members
 
 let currentOrder = [];
 let orderType = null;
+const SHIPPING_FEE = 5.0; // $5 shipping fee for delivery orders
 
 const pizzaMenu = [
   { id: "cheese", price: 9.99 },
@@ -100,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.querySelector("#submit-order button");
     const userDetails = document.getElementById("user-details");
     const addressField = document.getElementById("address-field");
+    const promotionField = document.getElementById("promotion-field");
+    const promotionMessage = document.getElementById("promotion-message");
     const customerName = document.getElementById("customer-name").value;
     const customerAddress = document.getElementById("customer-address").value;
     let total = 0;
@@ -147,9 +150,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // create display for total price
+    const subtotal = total;
+    const discount = getPromotionDiscount();
+    const discountAmount = subtotal * discount;
+    const shippingFee = orderType === "delivery" ? SHIPPING_FEE : 0;
+    const finalTotal = subtotal - discountAmount + shippingFee;
+
+    if (discount > 0) {
+      const subtotalLi = document.createElement("li");
+      subtotalLi.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+      orderItems.appendChild(subtotalLi);
+
+      const discountLi = document.createElement("li");
+      discountLi.textContent = `Discount (25%): -$${discountAmount.toFixed(2)}`;
+      discountLi.style.color = "green";
+      orderItems.appendChild(discountLi);
+    } else {
+      // Show subtotal even without discount if there's shipping
+      if (shippingFee > 0) {
+        const subtotalLi = document.createElement("li");
+        subtotalLi.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+        orderItems.appendChild(subtotalLi);
+      }
+    }
+
+    // Add shipping fee if applicable
+    if (shippingFee > 0) {
+      const shippingLi = document.createElement("li");
+      shippingLi.textContent = `Shipping Fee: $${shippingFee.toFixed(2)}`;
+      orderItems.appendChild(shippingLi);
+    }
+
     const totalLi = document.createElement("li");
     totalLi.style.fontWeight = "bold";
-    totalLi.textContent = `Total: $${total.toFixed(2)}`;
+    totalLi.textContent = `Total: $${finalTotal.toFixed(2)}`;
     orderItems.appendChild(totalLi);
 
     // hide menu area, user inputs, submit button and show order confirmation
@@ -158,6 +192,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     userDetails.style.display = "none";
     addressField.style.display = "none";
+    promotionField.style.display = "none";
+    promotionMessage.style.display = "none";
     document.getElementById("submit-order").style.display = "none";
     orderConfirmation.style.display = "block";
 
@@ -179,6 +215,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (orderType === "delivery") {
         addressField.style.display = "block";
       }
+      promotionField.style.display = "block";
+      promotionMessage.style.display = "block";
       document.getElementById("submit-order").style.display = "block";
 
       currentOrder = [];
@@ -193,6 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // reset, including removing the button and clearing the inputs
       document.getElementById("customer-name").value = "";
       document.getElementById("customer-address").value = "";
+
+      // Reset promotion code
+      if (typeof window.resetPromotionCode === "function") {
+        window.resetPromotionCode();
+      }
 
       restartBtn.remove();
     });

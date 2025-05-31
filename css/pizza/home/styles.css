@@ -331,6 +331,7 @@ h2 {
   display: flex;
   position: relative; 
   align-items: center;
+  z-index: 1; /* ensure when scrolling it is at the bottom */
   width: 75%;
   height: 90em;
   margin-left: 12.5%;
@@ -442,6 +443,11 @@ h2 {
 
 .add-button:hover {
   background-color: #ccc;
+}
+
+/* makes sure that images are not stretched */
+.own-pizza-item img {
+  height: 100%;
 }
 
 /* End choose your own pizza */

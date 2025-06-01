@@ -5,6 +5,7 @@ let orderType = null;
 const SHIPPING_FEE = 5.0; // $5 shipping fee for delivery orders
 
 const pizzaMenu = [
+  { id: "choose your own pizza", price: 10.99 },
   { id: "cheese", price: 9.99 },
   { id: "margherita", price: 10.99 },
   { id: "pepperoni", price: 12.49 },

@@ -64,7 +64,7 @@ input[type="number"] {
 
 /* makes sure that images are not stretched */
 .pizza-item img {
-  height: 100%;
+  height: 15em;
 }
 
 /* styles the ul with all the pizza details inside of it, setting a max width too to make sure that the order buttons have space */

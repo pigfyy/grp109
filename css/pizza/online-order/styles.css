@@ -1,0 +1,100 @@
+/* code to remove the automatic increment decrement buttons on the input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#ordering-portal {
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#order-button {
+  height: 3em;
+  margin-top: 10px;
+  width: 100%;
+}
+
+figure {
+  /* Styling */
+  background-color: floralwhite;
+  background-repeat: no-repeat;
+  background-position: -50px;
+  background-size: 80%;
+
+  /* Text */
+  color: floralwhite;
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+
+  /* Positioning */
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  padding-left: 10%;
+}
+
+/* aligns the order controls to the right */
+.order-controls {
+  float: right;
+  max-width: 10em;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+
+.quantity-selector {
+  display: flex;
+  width: 100%;
+}
+
+/* the quality input takes up as much width as the other two buttons leave for it */
+.quantity-selector .quantity-input {
+  width: 100%;
+  text-align: center;
+  margin: 0 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/* the quantity buttons need to be a square */
+.quantity-selector .quantity-btn {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 4em;
+}
+
+/* Background images. Alt text is unnessecary, as they're decorative */
+#cheese-pizza {
+  background-image: url(/images/pizza/online-order/cheese.png);
+}
+
+#margherita-pizza {
+  background-image: url(/images/pizza/online-order/margherita.png);
+}
+
+#pepperoni-pizza {
+  background-image: url(/images/pizza/online-order/pepperoni.png);
+}
+
+#bbq-pizza {
+  background-image: url(/images/pizza/online-order/bbq-chicken.png);
+}
+
+#veggie-pizza {
+  background-image: url(/images/pizza/online-order/vegetarian.png);
+}
+
+#hawaiian-pizza {
+  background-image: url(/images/pizza/online-order/hawaiian.png);
+}

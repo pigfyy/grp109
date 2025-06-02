@@ -1,0 +1,149 @@
+<!--Online ordering page. Created by Esal
+All pages are a group effort and have multiple contributors -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M05 - Module Group Assessment Assignment</title>
+    <meta name="description" content="This is a team project of grp3" />
+    <link rel="stylesheet" href="/css/pizza/online-order/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/pizza/universal.css" type="text/css"/>
+  </head>
+
+  <body>
+    <main>
+      <!-- Header for the menu to let the user enter information about themselves -->
+      <div id="ordering-portal">
+        <label for="order-type">Choose an order type:
+        <select name="order-type" id="order-type">
+          <option value="pickup">Pickup</option>
+          <option value="delivery" selected="selected">Delivery</option>
+        </select></label>
+
+        <div id="user-details">
+          <label for="customer-name">Your Name
+            <input type="text" id="customer-name" required/></label>
+          <label for="customer-address">Your Address
+            <input type="text" id="customer-address" required/></label>
+        </div>
+
+        <button id="order-button">Submit order</button>
+      </div>
+
+      <!-- Menu -->
+      <figure id="cheese-pizza">
+        <div class="pizza-details">
+          <h1>Cheese</h1>
+          <p>A classic pizza with tomato sauce and mozzarella.</p>
+          <h2>$9.99</h2>
+        </div>
+
+        <div class="order-controls">
+          <div class="quantity-selector">
+            <button class="quantity-btn minus-btn">-</button>
+            <input type="number" class="quantity-input" value="0" min="0" />
+            <button class="quantity-btn plus-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      </figure>
+
+      <figure id="margherita-pizza">
+        <div class="pizza-details">
+          <h1>Margherita</h1>
+          <p>A classic pizza with tomato sauce, mozzarella,<br>
+              and fresh basil.</p>
+          <h2>$10.99</h2>
+        </div>
+
+        <div class="order-controls">
+          <div class="quantity-selector">
+            <button class="quantity-btn minus-btn">-</button>
+            <input type="number" class="quantity-input" value="0" min="0" />
+            <button class="quantity-btn plus-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      </figure>
+
+      <figure id="pepperoni-pizza">
+        <div class="pizza-details">
+          <h1>Pepperoni</h1>
+          <p>Tomato sauce, mozzarella, and spicy pepperoni slices.</p>
+          <h2>$12.49</h2>
+        </div>
+
+        <div class="order-controls">
+          <div class="quantity-selector">
+            <button class="quantity-btn minus-btn">-</button>
+            <input type="number" class="quantity-input" value="0" min="0" />
+            <button class="quantity-btn plus-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      </figure>
+
+      <figure id="bbq-pizza">
+        <div class="pizza-details">
+          <h1>BBQ Chicken</h1>
+          <p>BBQ sauce, grilled chicken, red onions, and mozzarella</p>
+          <h2>$13.99</h2>
+        </div>
+
+        <div class="order-controls">
+          <div class="quantity-selector">
+            <button class="quantity-btn minus-btn">-</button>
+            <input type="number" class="quantity-input" value="0" min="0" />
+            <button class="quantity-btn plus-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      </figure>
+
+      <figure id="veggie-pizza">
+        <div class="pizza-details">
+          <h1>Veggie Supreme</h1>
+          <p>Tomato sauce, mozzarella, bell peppers, onions,<br>
+            mushrooms, and olives.</p>
+          <h2>$11.99</h2>
+        </div>
+
+        <div class="order-controls">
+          <div class="quantity-selector">
+            <button class="quantity-btn minus-btn">-</button>
+            <input type="number" class="quantity-input" value="0" min="0" />
+            <button class="quantity-btn plus-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      </figure>
+
+      <figure id="hawaiian-pizza">
+        <div class="pizza-details">
+          <h1>Hawaiian</h1>
+          <p>Tomato sauce, mozzarella, ham, and pineapple.</p>
+          <h2>$12.29</h2>
+        </div>
+
+        <div class="order-controls">
+          <div class="quantity-selector">
+            <button class="quantity-btn minus-btn">-</button>
+            <input type="number" class="quantity-input" value="0" min="0" />
+            <button class="quantity-btn plus-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      </figure>
+    </main>
+    
+    <script src="/js/universal.js"></script>
+  </body>
+</html>

@@ -1,58 +1,86 @@
-header {
-  background-color: #58314a;
-  color: #faf9f7;
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+/*  CSS shared by all pages. Created by Franklin
+    All pages are a group effort and have multiple contributors */
 
-header h1 {
-  font-family: "AucaRegular";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2.5em;
-  color: floralwhite;
-}
-
-header a {
-  color: #764f36;
-  text-decoration: none;
-}
-
-nav {
-  background-color: white;
-  justify-content: center;
-  color: #764f36;
-  text-align: center;
-  height: 60px;
-  font-size: 32px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  align-items: center;
-  display: flex;
-}
-
-nav ul li {
-  display: inline;
-  padding: 0.5em;
+body {
+    background-image: url("/images/pizza/universal/background.jpg");
 }
 
 main {
-  margin-top: 12em;
+    margin-top: 12em;
 }
 
+/* Generic navigation button */
+button {
+    background-color: #d7b054;
+    border-radius: 5%;
+}
+
+button:active {
+    background-color: #764f3681;
+}
+
+/* Top section of header */
+/*  h1 and h3 need to be defined separately, as otherwise
+    simply making the text hx overwrites them */
+header h1, h3 {
+    font-family: "AucaRegular";
+    font-weight: normal;
+    padding-left: 15px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    line-height: 0;
+}
+
+header {
+    background-color: #58314a;
+    color: floralwhite;
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Lower section of header */
+header nav {
+    background-color: white;
+    font-size: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    text-align: center;
+    height: 60px;
+}
+
+header nav ul li {
+    display: inline-block;
+    line-height: 25px;
+    padding: 0.5em;
+}
+
+header a {
+    color: #764f36;
+    text-decoration: none;
+}
+
+.active-url {
+    background-color: #ffe2d1;
+    border: 1px dotted #764f36;
+}
+
+/* FOOTER */
 footer {
-  background-color: #58314a;
-  box-sizing: border-box;
-  color: #faf9f7;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  line-height: 1.5em;
+    background-color: #58314a;
+    box-sizing: border-box;
+    color: #faf9f7;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    line-height: 1.5em;
 }
-
+  
 footer a {
-  display: inline-block;
-  height: 44px;
+    display: inline-block;
+    height: 44px;
 }

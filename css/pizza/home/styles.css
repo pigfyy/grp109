@@ -267,6 +267,22 @@ input[type="number"] {
 }
 
 /* Style for Online Table Reservation button ---> Added by Divyalakshana */
+
+/* payment fields styling added by Franklin */
+#payment-details {
+  text-align: center;
+  margin: 20px auto;
+  width: 75%;
+}
+
+#payment-details input {
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #d7af54;
+  border-radius: 5px;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -331,7 +347,7 @@ h2 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  position: relative; 
+  position: relative;
   align-items: center;
   z-index: 1; /*new*/
   width: 75%;
@@ -355,7 +371,7 @@ h2 {
   user-select: none;
 }
 /* font styling */
-.checkbox-group{
+.checkbox-group {
   font-family: cursive, serif;
 }
 /* Hide the browser's default checkbox */
@@ -382,7 +398,7 @@ h2 {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -429,7 +445,7 @@ h2 {
 }
 .add-button {
   padding: 10px 20px;
-  background-color: #D7AF54;
+  background-color: #d7af54;
   color: black;
   border: none;
   border-radius: 6px;

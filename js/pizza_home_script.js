@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const pickupBtn = document.getElementById("pickup-button");
   const deliveryBtn = document.getElementById("delivery-button");
   const addressField = document.getElementById("customer-address");
+  const cardNumberField = document.getElementById("card-number");
+  const expirationDateField = document.getElementById("expiration-date");
+  const securityCodeField = document.getElementById("security-code");
 
   // Show the modal when Order Now is clicked
   orderNowBtn.addEventListener("click", function (e) {
@@ -106,7 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const promotionMessage = document.getElementById("promotion-message");
     const customerName = document.getElementById("customer-name").value;
     const customerAddress = document.getElementById("customer-address").value;
+    const cardNumber = cardNumberField.value;
+    const expirationDate = expirationDateField.value;
+    const securityCode = securityCodeField.value;
     let total = 0;
+
+    // validate payment fields
+    if (!validatePaymentFields(cardNumber, expirationDate, securityCode)) {
+      return;
+    }
 
     // validates while considering order type (no need for address if pickup)
     if (!customerName) {
@@ -195,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addressField.style.display = "none";
     promotionField.style.display = "none";
     promotionMessage.style.display = "none";
+    document.getElementById("payment-details").style.display = "none"; // Hide payment fields
     document.getElementById("submit-order").style.display = "none";
     orderConfirmation.style.display = "block";
 
@@ -218,6 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       promotionField.style.display = "block";
       promotionMessage.style.display = "block";
+      document.getElementById("payment-details").style.display = "block"; // Show payment fields
       document.getElementById("submit-order").style.display = "block";
 
       currentOrder = [];
@@ -232,6 +245,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // reset, including removing the button and clearing the inputs
       document.getElementById("customer-name").value = "";
       document.getElementById("customer-address").value = "";
+      cardNumberField.value = "";
+      expirationDateField.value = "";
+      securityCodeField.value = "";
 
       // Reset promotion code
       if (typeof window.resetPromotionCode === "function") {
@@ -243,6 +259,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // clear current order
     currentOrder = [];
+  }
+
+  // validate payment fields added by Franklin
+  function validatePaymentFields(cardNumber, expirationDate, securityCode) {
+    // credit card number validation, by checking if it's between 13 and 19 digits
+    if (!/^\d{13,19}$/.test(cardNumber)) {
+      alert("Please enter a valid card number (13-19 digits).");
+      return false;
+    }
+
+    // checking if it fits the MM/YY format, regex from https://stackoverflow.com/questions/33337540/not-understanding-regex-10-201-9-for-validating-time-strings
+    const expDatePattern = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/;
+    if (!expDatePattern.test(expirationDate)) {
+      alert("Please enter a valid expiration date in MM/YY format.");
+      return false;
+    }
+
+    const [month, year] = expirationDate.split("/").map(Number);
+    const currentYear = new Date().getFullYear() % 100;
+    const currentMonth = new Date().getMonth() + 1;
+
+    // checking if the expiration date is in the past
+    if (year < currentYear || (year === currentYear && month < currentMonth)) {
+      alert("Expiration date cannot be in the past.");
+      return false;
+    }
+
+    // security code validation, by checking if it's exactly 3 digits
+    if (!/^\d{3}$/.test(securityCode)) {
+      alert("Please enter a valid 3 digit security code (CVV).");
+      return false;
+    }
+
+    return true;
   }
 
   // attach event to submit order button (function is extracted to be able to easily remove and reattach the handler within the eventListener)

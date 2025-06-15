@@ -11,11 +11,11 @@ header.innerHTML = `
 </div>
 <nav>
     <ul>
-        <li><a href="/pizza/index.html">Home</a></li>
-        <li><a href="/pizza/home/index.html">Menu</a></li>
-        <li><a href="/pizza/change-log/index.html">Change Log</a></li>
-        <li><a href="/pizza/validation-tracker/index.html">Validation Tracker</a></li>
-        <li><a href="/pizza/members/index.html">Team Members</a></li>
+        <li><a href="../pizza/index.html">Home</a></li>
+        <li><a href="../pizza/home/index.html">Menu</a></li>
+        <li><a href="../pizza/change-log/index.html">Change Log</a></li>
+        <li><a href="../pizza/validation-tracker/index.html">Validation Tracker</a></li>
+        <li><a href="../pizza/members/index.html">Team Members</a></li>
     </ul>
 </nav>
 `;

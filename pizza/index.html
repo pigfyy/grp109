@@ -1,49 +1,121 @@
 <!--Primary landing page. Created by Ashton, edited by Esal
     All pages are a group effort and have multiple contributors -->
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Artisanal Slice</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../css/pizza/landing/style.css" type="text/css">
-    <link rel="stylesheet" href="../css/pizza/universal.css">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="../css/pizza/landing/style.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../css/pizza/universal.css" />
+  </head>
 
-<body>
+  <body>
     <!-- A promo code that can be used when ordering online -->
     <aside>
-        <h4>For a limited time only: Use promo code '25off' to receive 25% off your order today!</h4>
+      <h4>
+        For a limited time only: Use promo code '25off' to receive 25% off your
+        order today!
+      </h4>
     </aside>
 
     <main>
-        <!-- A block advertising online ordering -->
-        <figure id="online-order">
-            <h1>MAKE AN ONLINE ORDER</h1>
-            <p>
-                You <i>like</i> ordering pizza over the internet, don't you, Kevin?<br>
-                Yes, you do. Oh, yes you do. *scratches belly*
-            </p>
-            <button><p>ORDER NOW</p></button>
-            <div style="clear: both"></div>
-        </figure>
+      <!-- carousel made by Franklin -->
+      <div class="carousel-container">
+        <!-- images -->
+        <img
+          src="../images/pizza/landing/pizza-1.webp"
+          alt="Delicious Pizza 1"
+          class="carousel-image"
+        />
+        <img
+          src="../images/pizza/landing/pizza-2.jpg"
+          alt="Delicious Pizza 2"
+          class="carousel-image"
+        />
+        <img
+          src="../images/pizza/landing/pizza-3.jpg"
+          alt="Delicious Pizza 3"
+          class="carousel-image"
+        />
+        <img
+          src="../images/pizza/landing/pizza-4.webp"
+          alt="Delicious Pizza 4"
+          class="carousel-image"
+        />
 
-        <!-- A block advertising our custom pizza creator -->
-        <figure id="custom-pizza">
-            <h1>ORDER A CUSTOM PIZZA</h1>
-            <p>
-                Saucy like your dad's magazines, or cheesy like your mom's jokes,<br>
-                order your favorite pies exactly how you like them. .
-            </p>
-            <button><p>ORDER NOW</p></button>
-            <div style="clear: both"></div>
-        </figure>
-        
+        <!-- Arrow navigation buttons -->
+        <button
+          class="carousel-arrow carousel-arrow-left"
+          type="button"
+          aria-label="Previous image"
+        >
+          &#8249;
+        </button>
+        <button
+          class="carousel-arrow carousel-arrow-right"
+          type="button"
+          aria-label="Next image"
+        >
+          &#8250;
+        </button>
+
+        <!-- dot navigation -->
+        <div class="carousel-dots">
+          <button
+            class="carousel-dot active"
+            data-index="0"
+            aria-label="Go to image 1"
+          ></button>
+          <button
+            class="carousel-dot"
+            data-index="1"
+            aria-label="Go to image 2"
+          ></button>
+          <button
+            class="carousel-dot"
+            data-index="2"
+            aria-label="Go to image 3"
+          ></button>
+          <button
+            class="carousel-dot"
+            data-index="3"
+            aria-label="Go to image 4"
+          ></button>
+        </div>
+      </div>
+
+      <!-- A block advertising online ordering -->
+      <figure id="online-order">
+        <h1>MAKE AN ONLINE ORDER</h1>
+        <p>
+          You <i>like</i> ordering pizza over the internet, don't you, Kevin?<br />
+          Yes, you do. Oh, yes you do. *scratches belly*
+        </p>
+        <button><p>ORDER NOW</p></button>
         <div style="clear: both"></div>
+      </figure>
+
+      <!-- A block advertising our custom pizza creator -->
+      <figure id="custom-pizza">
+        <h1>ORDER A CUSTOM PIZZA</h1>
+        <p>
+          Saucy like your dad's magazines, or cheesy like your mom's jokes,<br />
+          order your favorite pies exactly how you like them. .
+        </p>
+        <button><p>ORDER NOW</p></button>
+        <div style="clear: both"></div>
+      </figure>
+
+      <div style="clear: both"></div>
     </main>
 
     <script src="../js/universal.js"></script>
-</body>
+    <script src="../js/carousel.js"></script>
+  </body>
 </html>

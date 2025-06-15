@@ -1,4 +1,106 @@
-/* Landing Created by Ashton, Edited by Esal*/
+/* Landing Created by Ashton, Edited by Esal and carousel added by Franklin*/
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* carousel container --- carousel uses absolute positioning so that all the images can be in the dom at the same time */
+.carousel-container {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* absolute positioning for images and setting width/height to match its parent. also hidden by default with opacity: 0 */
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* if active, set opacity to 1 to have it be shown */
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* arrow button styling, absolute positioning to be floating on left and right sides of carousel images */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 15px 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* left and right arrows have different x positions */
+.carousel-arrow-left {
+  left: 15px;
+}
+
+.carousel-arrow-right {
+  right: 15px;
+}
+
+/* carousel dot navigation container, absolutely positioned to be centered at the bottom of carousel */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+/* carousel dot styling, overrides button styling with padding/margin: 0 */
+.carousel-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* if active (means the image is currently being shown), set background color to show that its the currently selected image */
+.carousel-dot.active {
+  background-color: white;
+}
+
 figure {
   width: 75%;
   border-radius: 5px;
@@ -44,7 +146,7 @@ aside {
   border-radius: 5px;
 
   position: absolute;
-  margin-top: 1.5%;
+  margin-top: 30rem;
   right: 5px;
 
   z-index: -1;

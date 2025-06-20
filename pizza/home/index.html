@@ -69,10 +69,23 @@ All pages are a group effort and have multiple contributors -->
         </div>
       </div>
       <!-- End of Online Table Reservation -->
-
+      <!-- Side Menu Bar added by Divyalakshana-->
+      <div class="side-menu">
+        <ul class="nav-list">
+          <li class="category-tab active" data-category="pizzas">Pizzas</li>
+          <li class="category-tab" data-category="custom">Choose your own pizza</li>
+          <li class="category-tab" data-category="beverages">Beverages</li>
+          <li class="category-tab" data-category="salads">Salads</li>
+          <li class="category-tab" data-category="sandwiches">Sandwiches</li>
+        </ul>
+      </div>
+      <!-- End of Side Menu Bar-->
+      
       <!-- Menu -->
+      <!-- div class "category-content" to enable side bar functionality added by Divyalakshana -->
       <div class="menu-area">
         <!-- Choose your own pizza: esal -->
+        <div class="category-content" id="custom">
         <div class="pizza-item" style="height: 50%">
           <img src="../../images/pizza/menu/cheese.png" alt="Empty Pizza" />
           <div class="pizza-details">
@@ -266,8 +279,9 @@ All pages are a group effort and have multiple contributors -->
             </div>
           </div>
         </div>
+        </div>
         <!-- End of choose your own pizza -->
-
+      <div class="category-content" id="pizzas">
         <div class="pizza-item">
           <img src="../../images/pizza/menu/cheese.png" alt="Cheese Pizza" />
           <div class="pizza-details">
@@ -402,6 +416,95 @@ All pages are a group effort and have multiple contributors -->
           <div style="clear: both"></div>
         </div>
       </div>
+      <div class="category-content" id="beverages">
+        <div class="pizza-item">
+          <img
+            src="../../images/pizza/menu/Strawberry-Lemonade.jpg"
+            alt="strawberry lemonade"
+          />
+          <div class="beverage-details">
+            <h1>Strawberry Lemonade</h1>
+            <ul>
+              <li>Strawberry lemonade with a soda and a twist of lemon</li>
+              <li>Price: $7.99</li>
+            </ul>
+          </div>
+          <div class="order-controls">
+            <div class="quantity-selector">
+              <button class="quantity-btn minus-btn">-</button>
+              <input type="number" class="quantity-input" value="0" min="0" />
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div style="clear: both"></div>
+        </div>
+
+        <div class="pizza-item">
+          <img
+            src="../../images/pizza/menu/rasberry_lemonade.jpg"
+            alt="strawberry lemonade"
+          />
+          <div class="beverage-details">
+            <h1>Rasberry Lemonade</h1>
+            <ul>
+              <li>Strawberry lemonade with a soda and a twist of lemon</li>
+              <li>Price: $7.99</li>
+            </ul>
+          </div>
+          <div class="order-controls">
+            <div class="quantity-selector">
+              <button class="quantity-btn minus-btn">-</button>
+              <input type="number" class="quantity-input" value="0" min="0" />
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div style="clear: both"></div>
+        </div>
+
+        <div class="pizza-item">
+          <img
+            src="../../images/pizza/menu/coke.jpg"
+            alt="Coke"
+          />
+          <div class="beverage-details">
+            <h1>Coke</h1>
+            <ul>
+              <li>Strawberry lemonade with a soda and a twist of lemon</li>
+              <li>Price: $3.99</li>
+            </ul>
+          </div>
+          <div class="order-controls">
+            <div class="quantity-selector">
+              <button class="quantity-btn minus-btn">-</button>
+              <input type="number" class="quantity-input" value="0" min="0" />
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div style="clear: both"></div>
+        </div>
+        <div class="pizza-item">
+          <img
+            src="../../images/pizza/menu/pepsi.jpg"
+            alt="pepsi"
+          />
+          <div class="beverage-details">
+            <h1>Pepsi</h1>
+            <ul>
+              <li>Strawberry lemonade with a soda and a twist of lemon</li>
+              <li>Price: $3.99</li>
+            </ul>
+          </div>
+          <div class="order-controls">
+            <div class="quantity-selector">
+              <button class="quantity-btn minus-btn">-</button>
+              <input type="number" class="quantity-input" value="0" min="0" />
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div style="clear: both"></div>
+        </div>
+      </div>  
+      </div>
 
       <!-- User details moved below menu -->
       <div id="user-details">
@@ -450,6 +553,7 @@ All pages are a group effort and have multiple contributors -->
     <script src="../../js/pizza_home_table_reservation_script.js"></script>
     <script src="../../js/promotion_code.js"></script>
     <script src="../../js/pizza_home_script.js"></script>
+    <script src="../../js/category_display.js"></script>
     <script src="../../js/universal.js"></script>
   </body>
 </html>

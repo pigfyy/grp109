@@ -11,11 +11,11 @@ header.innerHTML = `
 </div>
 <nav>
     <ul>
-        <li><a href="../pizza/">Home</a></li>
-        <li><a href="../pizza/home/">Menu</a></li>
-        <li><a href="../pizza/change-log/">Change Log</a></li>
-        <li><a href="../pizza/validation-tracker/">Validation Tracker</a></li>
-        <li><a href="../members/">Team Members</a></li>
+        <li><a href="../">Home</a></li>
+        <li><a href="../../home/">Menu</a></li>
+        <li><a href="../../change-log/">Change Log</a></li>
+        <li><a href="../../validation-tracker/">Validation Tracker</a></li>
+        <li><a href="../../members">Team Members</a></li>
     </ul>
 </nav>
 `;
@@ -24,8 +24,6 @@ header.innerHTML = `
 let footer = document.createElement('footer');
 footer.innerHTML = `
 <p>&copy; 2025 Artisanal Slice. All rights reserved.</p>
-<!--Footer found at the bottom of most pizza websites-->
-<!--W3C validator footer-->
 <div style="text-align: center">
     <a href="https://jigsaw.w3.org/css-validator/" target="_blank" alt="W3 Validator">
         <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"/>

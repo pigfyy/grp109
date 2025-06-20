@@ -44,14 +44,15 @@ input[type="number"] {
   border-radius: 6%;
 
   /* Positioning */
-  display: flex;
+ /* display: flex;*/
   align-items: center;
-  width: 75%;
-  height: 25em;
-  margin-left: 12.5%;
+  width: 30%;
+  /*height: 25em;*/
+  margin-left: 20%;
   margin-right: 12.5%;
   margin-bottom: 2em;
   padding: 1em;
+  text-align: center;
 }
 
 /* styles pizza details */
@@ -60,6 +61,7 @@ input[type="number"] {
   flex-direction: column;
   justify-content: center;
   margin-left: 1em;
+  text-align: left;
 }
 
 /* makes sure that images are not stretched */
@@ -84,6 +86,60 @@ input[type="number"] {
   font-size: 1.5em;
   font-family: cursive, serif;
 }
+
+/* Beverage items added by Divyalakshana*/
+
+.beverages {
+  /* Styling */
+  background-color: #faf9f7;
+  border-radius: 6%;
+
+  /* Positioning */
+ /* display: flex;*/
+  align-items: center;
+  width: 30%;
+  /*height: 25em;*/
+  margin-left: 20%;
+  margin-right: 12.5%;
+  margin-bottom: 2em;
+  padding: 1em;
+  text-align: center;
+}
+
+
+/* styles pizza details */
+.beverage-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+  text-align: left;
+}
+
+/* makes sure that images are not stretched */
+.beverages img {
+  height: 15em;
+}
+
+/* styles the ul with all the pizza details inside of it, setting a max width too to make sure that the order buttons have space */
+.beverages ul {
+  padding-left: 0;
+  max-width: 25em;
+}
+
+/* adds margin bottom to pizza heading so that it's adquately seperated from the details */
+.beverages h1 {
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+/* setting font for pizza details */
+.beverages li {
+  font-size: 1.5em;
+  font-family: cursive, serif;
+}
+
+/*End of styles for beverages*/
 
 .order-button,
 .order-now-button,
@@ -127,12 +183,15 @@ input[type="number"] {
 
 /* the quantity buttons need to be a square */
 .quantity-selector .quantity-btn {
-  background-color: #eee;
+  background-color: #780e0e;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
   aspect-ratio: 1;
   width: 4rem;
+  color:#fff;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 /* adds different color when the button is actively pressed */
@@ -463,3 +522,54 @@ h2 {
   align-items: center;
 }
 /* End choose your own pizza */
+
+/*Sidebar styles added by Divyalakshana*/
+body {
+  margin: 0px;
+}
+
+.side-menu {
+  margin-right: 10px;
+  top:60px;
+  margin-top: 10%;
+  margin-left: 10px;
+  padding: 20px;
+  /*padding-top: 10%;*/
+  width: 200px;
+  background-color: #faf9f7;
+  position: fixed;
+  height: 50%;
+  overflow: hidden;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-tab {
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transistion: background 0.3s;
+  border: 1px solid;
+  color:rgb(118, 79, 54);
+  font-size: 1.6em;
+}
+
+.category-content {
+  margin-top: 200px;
+  scroll-margin-top: 200px;
+}
+.category-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.category-tab.active {
+  background-color: darkred;
+  color: floralwhite;
+}
+/*Side bar styles ends here*/

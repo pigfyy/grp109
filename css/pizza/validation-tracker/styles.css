@@ -1,3 +1,7 @@
+body {
+  background-image: url("../../../images/pizza/universal/background-green.png");
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

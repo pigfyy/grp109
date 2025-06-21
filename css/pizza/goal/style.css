@@ -1,1 +1,12 @@
 /* Created by Esal */
+
+/* Create white boxes around each section */
+.goal-initial,
+.goal-accomplished,
+.goal-notdone {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

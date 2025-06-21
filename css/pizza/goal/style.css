@@ -1,10 +1,16 @@
 /* Created by Esal */
 
+/* Chnage bg color */
+body {
+    background-color: #A8AF00;
+}
+
 /* Create white boxes around each section */
 .goal-initial,
 .goal-accomplished,
 .goal-notdone {
-  background-color: #ffffff;
+  background-color: #FAF9F7;
+  max-width: 60%;
   border-radius: 8px;
   padding: 2.5rem;
   margin: 2rem 0;

@@ -1,11 +1,17 @@
 /* Created by Esal */
 
+/* Chnage bg color */
+body {
+    background-color: #A8AF00;
+}
+
 /* Create white boxes around each section */
 #Divya,
 #Franklin,
 #Esal {
-  background-color: #ffffff;
+  background-color: #FAF9F7;
   border-radius: 8px;
+  max-width: 60%;
   padding: 2.5rem;
   margin: 2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);

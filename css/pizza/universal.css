@@ -2,7 +2,7 @@
     All pages are a group effort and have multiple contributors */
 
 body {
-    background-image: url("/images/pizza/universal/background.jpg");
+    background-image: url("../../images/pizza/universal/background.jpg");
 }
 
 main {
@@ -69,7 +69,7 @@ header a {
     border: 1px dotted #764f36;
 }
 
-/* FOOTER 
+/* FOOTER */
 footer {
     background-color: #58314a;
     box-sizing: border-box;
@@ -84,4 +84,3 @@ footer a {
     display: inline-block;
     height: 44px;
 }
-*/

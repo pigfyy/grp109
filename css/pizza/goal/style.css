@@ -3,6 +3,7 @@
 /* Chnage bg color */
 body {
     background-color: #A8AF00;
+    padding-top: 150px;
 }
 
 /* Create white boxes around each section */
@@ -10,9 +11,23 @@ body {
 .goal-accomplished,
 .goal-notdone {
   background-color: #FAF9F7;
-  max-width: 60%;
+  max-width: 70%;
+  margin: 2rem auto;
   border-radius: 8px;
   padding: 2.5rem;
-  margin: 2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+}
+
+/* Title Banners */
+h1, h3 {
+  background-color: #58314A;
+  color: #FAF9F7;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-top: 30px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+  text-align: center;
 }

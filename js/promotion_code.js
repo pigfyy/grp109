@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       promotionMessage.style.fontWeight = "normal";
     } else {
       promotionCodeValid = false;
-      promotionMessage.textContent = "✗ Invalid promotion code.";
+      promotionMessage.textContent =
+        "✗ Invalid promotion code. (hint: it's 25off)";
       promotionMessage.style.color = "red";
       promotionMessage.style.fontWeight = "normal";
     }

@@ -9,6 +9,12 @@ main {
   flex-direction: column;
 }
 
+.custom-pizza-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* carousel container --- carousel uses absolute positioning so that all the images can be in the dom at the same time */
 .carousel-container {
   height: 600px;
@@ -102,9 +108,8 @@ main {
 }
 
 figure {
-  width: 75%;
+  width: 90%;
   border-radius: 5px;
-  float: left;
 }
 
 figure h1 {

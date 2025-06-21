@@ -1,10 +1,6 @@
 /*  CSS shared by all pages. Created by Franklin, edited by Esal
     All pages are a group effort and have multiple contributors */
 
-body {
-    background-image: url("../../images/pizza/universal/background.jpg");
-}
-
 main {
     margin-top: 12em;
 }

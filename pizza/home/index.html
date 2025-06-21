@@ -18,27 +18,57 @@ All pages are a group effort and have multiple contributors -->
       type="text/css"
     />
   </head>
-  
-<!-- Header and footer is now added to the universal.js file -->
 
-    <main>
-      <!-- Order now button -->
-      <div id="order-now">
-        <button class="order-now-button">Choose Order Type</button>
-      </div>
-
-      <!-- Modal pop-up -->
-      <div id="overlay"></div>
-
-      <div id="order-modal">
-        <p>Would you like pick up or delivery?</p>
-        <button id="pickup-button">Pick Up</button>
-        <button id="delivery-button">Delivery</button>
-      </div>
-
+  <!-- Header and footer is now added to the universal.js file -->
+  <body>
+    <main class="relative">
       <!-- Online Table Reservation div added by Divyalakshana-->
-      <div id="table_reservation">
+      <!-- <div id="table_reservation">
         <button onclick="openReservation()">Online Table Reservation</button>
+      </div> -->
+
+      <!-- Menu View Cart -->
+      <div id="menu-view-cart" class="menu-view-cart">
+        <!-- Header -->
+        <div class="cart-header">Your Order</div>
+
+        <!-- Order Items Container -->
+        <div class="cart-items-container" id="current-order-items">
+          <!-- Dynamic order items will be added here -->
+
+          <!-- Empty State (shown when no items) -->
+          <div class="empty-cart-state" id="empty-cart">
+            <p>Your cart is empty</p>
+            <p>Add some delicious items to get started!</p>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary" id="order-summary">
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span id="subtotal-amount">$0.00</span>
+            </div>
+            <div class="summary-row" id="discount-row" style="display: none">
+              <span>Discount:</span>
+              <span id="discount-amount" class="discount-amount">-$0.00</span>
+            </div>
+            <div class="summary-row" id="shipping-row" style="display: none">
+              <span>Shipping Fee:</span>
+              <span id="shipping-amount">$0.00</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total:</span>
+              <span class="total-amount" id="total-amount">$0.00</span>
+            </div>
+          </div>
+
+          <!-- Checkout Button -->
+          <button id="proceed-to-checkout-btn" class="checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
       </div>
 
       <!--The modal-->
@@ -69,487 +99,702 @@ All pages are a group effort and have multiple contributors -->
         </div>
       </div>
       <!-- End of Online Table Reservation -->
-      <!-- Side Menu Bar added by Divyalakshana-->
-      <div class="side-menu">
-        <ul class="nav-list">
-          <li class="category-tab active" data-category="pizzas">Pizzas</li>
-          <li class="category-tab" data-category="custom">Choose your own pizza</li>
-          <li class="category-tab" data-category="beverages">Beverages</li>
-          <li class="category-tab" data-category="salads">Salads</li>
-          <li class="category-tab" data-category="sandwiches">Sandwiches</li>
-        </ul>
+      <!-- Menu View Elements -->
+      <div id="menu-view">
+        <!-- Side Menu Bar added by Divyalakshana-->
+        <div class="side-menu">
+          <ul class="nav-list">
+            <li class="category-tab active" data-category="pizzas">Pizzas</li>
+            <li class="category-tab" data-category="custom">
+              Choose your own pizza
+            </li>
+            <li class="category-tab" data-category="beverages">Beverages</li>
+            <li class="category-tab" data-category="salads">Salads</li>
+            <li class="category-tab" data-category="sandwiches">Sandwiches</li>
+          </ul>
+        </div>
+        <!-- End of Side Menu Bar-->
+
+        <!-- Menu -->
+        <!-- div class "category-content" to enable side bar functionality added by Divyalakshana -->
+        <div class="menu-area">
+          <!-- Choose your own pizza: esal -->
+          <div class="category-content" id="custom">
+            <div class="pizza-item" style="height: 50%">
+              <img src="../../images/pizza/menu/cheese.png" alt="Empty Pizza" />
+              <div class="pizza-details">
+                <h1>Choose your own pizza</h1>
+
+                <h3>Crust</h3>
+                <div class="checkbox-group">
+                  <label class="container"
+                    >Thin crust
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Normal crust
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Thick crust
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <h3>Cheese</h3>
+                <div class="checkbox-group">
+                  <label class="container"
+                    >None
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Light
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Normal
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Extra
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <h3>Sauce</h3>
+                <div class="checkbox-group">
+                  <label class="container"
+                    >Tomato
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Honey BBQ
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Garlic parmesan
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >No sauce
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <h3>Meat toppings</h3>
+                <div class="checkbox-group">
+                  <label class="container"
+                    >Ham
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Beef
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Pepperoni
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Italian Sausage
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Premium Chicken
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Bacon
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Philly Steak
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <h3>Non-meat toppings</h3>
+                <div class="checkbox-group">
+                  <label class="container"
+                    >Hot Buffalo Sauce
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Jalapeno Peppers
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Onions
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Banana Peppers
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Diced Tomatoes
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Black Olives
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Mushrooms
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Pineapple
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Shredded Provolone Cheese
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Cheddar Cheese Blend
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Green Peppers
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Spinach
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Feta Cheese
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >Shredded Parmesan Asiago
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of choose your own pizza -->
+          <div class="category-content" id="pizzas">
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/cheese.png"
+                alt="Cheese Pizza"
+              />
+              <div class="pizza-details">
+                <h1>Cheese</h1>
+                <ul>
+                  <li>Classic pizza with tomato sauce and mozzarella.</li>
+                  <li>Price: $9.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/margherita.png"
+                alt="Margherita Pizza"
+              />
+              <div class="pizza-details">
+                <h1>Margherita</h1>
+                <ul>
+                  <li>
+                    Classic pizza with tomato sauce, mozzarella, and fresh basil
+                  </li>
+                  <li>Price: $10.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/pepperoni.png"
+                alt="Pepperoni Pizza"
+              />
+              <div class="pizza-details">
+                <h1>Pepperoni</h1>
+                <ul>
+                  <li>Tomato sauce, mozzarella, and spicy pepperoni slices</li>
+                  <li>Price: $12.49</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/bbq-chicken.png"
+                alt="BBQ Chicken Pizza"
+              />
+              <div class="pizza-details">
+                <h1>BBQ Chicken</h1>
+                <ul>
+                  <li>
+                    BBQ sauce, grilled chicken, red onions, and mozzarella
+                  </li>
+                  <li>Price: $13.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/vegetarian.png"
+                alt="Veggie Supreme Pizza"
+              />
+              <div class="pizza-details">
+                <h1>Veggie Supreme</h1>
+                <ul>
+                  <li>
+                    Tomato sauce, mozzarella, bell peppers, onions, mushrooms,
+                    and olives
+                  </li>
+                  <li>Price: $11.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/hawaiian.png"
+                alt="Hawaiian Pizza"
+              />
+              <div class="pizza-details">
+                <h1>Hawaiian</h1>
+                <ul>
+                  <li>Tomato sauce, mozzarella, ham, and pineapple</li>
+                  <li>Price: $12.29</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+          </div>
+          <div class="category-content" id="beverages">
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/Strawberry-Lemonade.jpg"
+                alt="strawberry lemonade"
+              />
+              <div class="beverage-details">
+                <h1>Strawberry Lemonade</h1>
+                <ul>
+                  <li>Strawberry lemonade with a soda and a twist of lemon</li>
+                  <li>Price: $7.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img
+                src="../../images/pizza/menu/rasberry_lemonade.jpg"
+                alt="strawberry lemonade"
+              />
+              <div class="beverage-details">
+                <h1>Rasberry Lemonade</h1>
+                <ul>
+                  <li>Strawberry lemonade with a soda and a twist of lemon</li>
+                  <li>Price: $7.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="pizza-item">
+              <img src="../../images/pizza/menu/coke.jpg" alt="Coke" />
+              <div class="beverage-details">
+                <h1>Coke</h1>
+                <ul>
+                  <li>Strawberry lemonade with a soda and a twist of lemon</li>
+                  <li>Price: $3.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+            <div class="pizza-item">
+              <img src="../../images/pizza/menu/pepsi.jpg" alt="pepsi" />
+              <div class="beverage-details">
+                <h1>Pepsi</h1>
+                <ul>
+                  <li>Strawberry lemonade with a soda and a twist of lemon</li>
+                  <li>Price: $3.99</li>
+                </ul>
+              </div>
+              <div class="order-controls">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus-btn">-</button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="0"
+                    min="0"
+                  />
+                  <button class="quantity-btn plus-btn">+</button>
+                </div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Menu View -->
       </div>
-      <!-- End of Side Menu Bar-->
-      
-      <!-- Menu -->
-      <!-- div class "category-content" to enable side bar functionality added by Divyalakshana -->
-      <div class="menu-area">
-        <!-- Choose your own pizza: esal -->
-        <div class="category-content" id="custom">
-        <div class="pizza-item" style="height: 50%">
-          <img src="../../images/pizza/menu/cheese.png" alt="Empty Pizza" />
-          <div class="pizza-details">
-            <h1>Choose your own pizza</h1>
 
-            <h3>Crust</h3>
-            <div class="checkbox-group">
-              <label class="container"
-                >Thin crust
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Normal crust
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Thick crust
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
+      <!-- Checkout View -->
+      <div id="checkout-view" style="display: none" class="checkout-view">
+        <!-- Checkout Content -->
+        <div class="checkout-content">
+          <!-- Header with Return Button -->
+          <div class="checkout-header-row">
+            <button id="return-to-menu-btn" class="return-menu-btn">
+              <span>←</span>
+              <span>Return to Menu</span>
+            </button>
+            <h1 class="checkout-title">Checkout</h1>
+            <div class="checkout-spacer"></div>
+          </div>
+
+          <!-- Order Summary Section -->
+          <div class="order-summary-section">
+            <h2 class="order-summary-title">Your Order</h2>
+            <div id="checkout-order-items" class="checkout-order-items">
+              <!-- Order items will be populated here -->
+            </div>
+            <div id="checkout-empty-cart" class="checkout-empty-cart">
+              <p>Your cart is empty</p>
             </div>
 
-            <h3>Cheese</h3>
-            <div class="checkbox-group">
-              <label class="container"
-                >None
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Light
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Normal
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Extra
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-
-            <h3>Sauce</h3>
-            <div class="checkbox-group">
-              <label class="container"
-                >Tomato
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Honey BBQ
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Garlic parmesan
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >No sauce
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-
-            <h3>Meat toppings</h3>
-            <div class="checkbox-group">
-              <label class="container"
-                >Ham
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Beef
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Pepperoni
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Italian Sausage
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Premium Chicken
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Bacon
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Philly Steak
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-
-            <h3>Non-meat toppings</h3>
-            <div class="checkbox-group">
-              <label class="container"
-                >Hot Buffalo Sauce
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Jalapeno Peppers
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Onions
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Banana Peppers
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Diced Tomatoes
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Black Olives
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Mushrooms
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Pineapple
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Shredded Provolone Cheese
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Cheddar Cheese Blend
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Green Peppers
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Spinach
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Feta Cheese
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Shredded Parmesan Asiago
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
+            <!-- Order Totals -->
+            <div class="order-totals">
+              <div class="order-total-row">
+                <span>Subtotal:</span>
+                <span id="checkout-subtotal">$0.00</span>
+              </div>
+              <div
+                class="order-total-row"
+                id="checkout-discount-row"
+                style="display: none"
+              >
+                <span>Discount:</span>
+                <span id="checkout-discount" class="discount-amount"
+                  >-$0.00</span
+                >
+              </div>
+              <div
+                class="order-total-row"
+                id="checkout-shipping-row"
+                style="display: none"
+              >
+                <span>Shipping Fee:</span>
+                <span id="checkout-shipping">$0.00</span>
+              </div>
+              <div class="order-total-row final">
+                <span>Total:</span>
+                <span id="checkout-total" class="total-amount">$0.00</span>
+              </div>
             </div>
           </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
+
+          <!-- Order Type Selection -->
+          <div class="order-type-section">
+            <h2 class="order-type-title">Order Type</h2>
+            <div class="order-type-buttons">
+              <button
+                id="pickup-btn"
+                class="order-type-btn"
+                onclick="selectOrderType('pickup')"
+              >
+                <div class="order-type-btn-title">Pickup</div>
+                <div class="order-type-btn-subtitle">
+                  Ready in 15-20 minutes
+                </div>
+              </button>
+              <button
+                id="delivery-btn"
+                class="order-type-btn"
+                onclick="selectOrderType('delivery')"
+              >
+                <div class="order-type-btn-title">Delivery</div>
+                <div class="order-type-btn-subtitle">
+                  30-45 minutes + $5.00 fee
+                </div>
+              </button>
             </div>
+          </div>
+
+          <!-- Customer Information -->
+          <div class="checkout-section">
+            <h2 class="section-title">Customer Information</h2>
+            <div class="customer-info-container">
+              <div class="input-group">
+                <label class="input-label">Name *</label>
+                <input
+                  type="text"
+                  id="customer-name"
+                  placeholder="Enter your full name"
+                  class="customer-input"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label class="input-label">Phone</label>
+                <input
+                  type="tel"
+                  id="customer-phone"
+                  class="customer-input"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+
+            <!-- Delivery Address (hidden by default) -->
+            <div id="address-field" style="display: none" class="address-field">
+              <label class="address-label">Delivery Address *</label>
+              <textarea
+                id="customer-address"
+                rows="3"
+                class="address-textarea"
+                placeholder="Enter your full delivery address..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Promotion Code -->
+          <div class="promotion-section" id="promotion-field">
+            <h2 class="promotion-title">Promotion Code</h2>
+            <div class="promotion-input-row">
+              <input
+                type="text"
+                id="promotion-code"
+                class="promotion-input"
+                placeholder="Enter promotion code"
+              />
+              <button id="apply-promo-btn" class="promotion-apply-btn">
+                Apply
+              </button>
+            </div>
+            <div id="promotion-message" class="promotion-message"></div>
+          </div>
+
+          <!-- Payment Details -->
+          <div class="payment-section" id="payment-details">
+            <h2 class="payment-title">Payment Information</h2>
+            <div class="payment-grid">
+              <div class="payment-grid-full">
+                <div class="payment-input-group">
+                  <label class="payment-label">Card Number *</label>
+                  <input
+                    type="text"
+                    id="card-number"
+                    class="payment-input"
+                    placeholder="1234 5678 9012 3456"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="payment-input-group">
+                <label class="payment-label">Expiration Date *</label>
+                <input
+                  type="text"
+                  id="expiration-date"
+                  class="payment-input"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="payment-input-group">
+                <label class="payment-label">Security Code *</label>
+                <input
+                  type="text"
+                  id="security-code"
+                  class="payment-input"
+                  placeholder="123"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Order -->
+          <div id="submit-order" class="submit-order-section">
+            <button class="submit-order-btn">Place Order</button>
+          </div>
+
+          <!-- Order Confirmation (hidden by default) -->
+          <div
+            id="order-confirmation"
+            style="display: none"
+            class="order-confirmation"
+          >
+            <h2 class="confirmation-title">Order Confirmed!</h2>
+            <div id="order-items" class="confirmation-items">
+              <!-- Order confirmation details will be populated here -->
+            </div>
+            <p class="confirmation-message">
+              Thank you for your order! You will receive a confirmation email
+              shortly.
+            </p>
           </div>
         </div>
-        </div>
-        <!-- End of choose your own pizza -->
-      <div class="category-content" id="pizzas">
-        <div class="pizza-item">
-          <img src="../../images/pizza/menu/cheese.png" alt="Cheese Pizza" />
-          <div class="pizza-details">
-            <h1>Cheese</h1>
-            <ul>
-              <li>Classic pizza with tomato sauce and mozzarella.</li>
-              <li>Price: $9.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/margherita.png"
-            alt="Margherita Pizza"
-          />
-          <div class="pizza-details">
-            <h1>Margherita</h1>
-            <ul>
-              <li>
-                Classic pizza with tomato sauce, mozzarella, and fresh basil
-              </li>
-              <li>Price: $10.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/pepperoni.png"
-            alt="Pepperoni Pizza"
-          />
-          <div class="pizza-details">
-            <h1>Pepperoni</h1>
-            <ul>
-              <li>Tomato sauce, mozzarella, and spicy pepperoni slices</li>
-              <li>Price: $12.49</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/bbq-chicken.png"
-            alt="BBQ Chicken Pizza"
-          />
-          <div class="pizza-details">
-            <h1>BBQ Chicken</h1>
-            <ul>
-              <li>BBQ sauce, grilled chicken, red onions, and mozzarella</li>
-              <li>Price: $13.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/vegetarian.png"
-            alt="Veggie Supreme Pizza"
-          />
-          <div class="pizza-details">
-            <h1>Veggie Supreme</h1>
-            <ul>
-              <li>
-                Tomato sauce, mozzarella, bell peppers, onions, mushrooms, and
-                olives
-              </li>
-              <li>Price: $11.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/hawaiian.png"
-            alt="Hawaiian Pizza"
-          />
-          <div class="pizza-details">
-            <h1>Hawaiian</h1>
-            <ul>
-              <li>Tomato sauce, mozzarella, ham, and pineapple</li>
-              <li>Price: $12.29</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-      </div>
-      <div class="category-content" id="beverages">
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/Strawberry-Lemonade.jpg"
-            alt="strawberry lemonade"
-          />
-          <div class="beverage-details">
-            <h1>Strawberry Lemonade</h1>
-            <ul>
-              <li>Strawberry lemonade with a soda and a twist of lemon</li>
-              <li>Price: $7.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/rasberry_lemonade.jpg"
-            alt="strawberry lemonade"
-          />
-          <div class="beverage-details">
-            <h1>Rasberry Lemonade</h1>
-            <ul>
-              <li>Strawberry lemonade with a soda and a twist of lemon</li>
-              <li>Price: $7.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/coke.jpg"
-            alt="Coke"
-          />
-          <div class="beverage-details">
-            <h1>Coke</h1>
-            <ul>
-              <li>Strawberry lemonade with a soda and a twist of lemon</li>
-              <li>Price: $3.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-        <div class="pizza-item">
-          <img
-            src="../../images/pizza/menu/pepsi.jpg"
-            alt="pepsi"
-          />
-          <div class="beverage-details">
-            <h1>Pepsi</h1>
-            <ul>
-              <li>Strawberry lemonade with a soda and a twist of lemon</li>
-              <li>Price: $3.99</li>
-            </ul>
-          </div>
-          <div class="order-controls">
-            <div class="quantity-selector">
-              <button class="quantity-btn minus-btn">-</button>
-              <input type="number" class="quantity-input" value="0" min="0" />
-              <button class="quantity-btn plus-btn">+</button>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-        </div>
-      </div>  
-      </div>
-
-      <!-- User details moved below menu -->
-      <div id="user-details">
-        <input
-          type="text"
-          id="customer-name"
-          placeholder="Your Name"
-          required
-        />
-      </div>
-      <div id="address-field">
-        <input type="text" id="customer-address" placeholder="Address" />
-      </div>
-
-      <!-- Promotion code field added by Franklin -->
-      <div id="promotion-field">
-        <input type="text" id="promotion-code" placeholder="Promotion Code" />
-        <button id="check-code-btn" type="button">Check Code</button>
-      </div>
-      <div id="promotion-message"></div>
-
-      <!-- Payment fields added by Franklin -->
-      <div id="payment-details">
-        <input
-          type="text"
-          id="card-number"
-          placeholder="Card Number"
-          required
-        />
-        <input type="text" id="expiration-date" placeholder="MM/YY" required />
-        <input type="text" id="security-code" placeholder="CVV" required />
-      </div>
-
-      <!-- Submit order and order confirmation added by Franklin -->
-      <div id="submit-order">
-        <button class="order-button">Submit order</button>
-      </div>
-
-      <div id="order-confirmation">
-        <h2>Thank you for your order!</h2>
-        <ul id="order-items"></ul>
-        <p>will arrive soon!</p>
       </div>
     </main>
-  
+
     <script src="../../js/pizza_home_table_reservation_script.js"></script>
     <script src="../../js/promotion_code.js"></script>
     <script src="../../js/pizza_home_script.js"></script>

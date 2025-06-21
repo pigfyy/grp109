@@ -5,7 +5,7 @@ const VALID_PROMOTION_CODE = "25off";
 
 document.addEventListener("DOMContentLoaded", function () {
   const promotionInput = document.getElementById("promotion-code");
-  const checkCodeBtn = document.getElementById("check-code-btn");
+  const checkCodeBtn = document.getElementById("apply-promo-btn");
   const promotionMessage = document.getElementById("promotion-message");
 
   // when the check code button is clicked, check code to see if it equals the valid promotion code constant
@@ -19,11 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
         "✓ Valid promotion code! 25% discount applied.";
       promotionMessage.style.color = "green";
       promotionMessage.style.fontWeight = "bold";
-      checkCodeBtn.textContent = "✓ Valid";
+      checkCodeBtn.textContent = "✓ Applied";
       checkCodeBtn.disabled = true;
       checkCodeBtn.style.backgroundColor = "#4CAF50";
       checkCodeBtn.style.color = "white";
       promotionInput.disabled = true;
+
+      // Update cart displays if functions are available
+      if (typeof window.updateCartDisplay === "function") {
+        window.updateCartDisplay();
+      }
+      if (typeof window.updateCheckoutOrderSummary === "function") {
+        window.updateCheckoutOrderSummary();
+      }
     } else if (enteredCode === "") {
       promotionMessage.textContent = "Please enter a promotion code.";
       promotionMessage.style.color = "orange";
@@ -49,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     promotionInput.value = "";
     promotionInput.disabled = false;
     promotionMessage.textContent = "";
-    checkCodeBtn.textContent = "Check Code";
+    checkCodeBtn.textContent = "Apply";
     checkCodeBtn.disabled = false;
     checkCodeBtn.style.backgroundColor = "";
     checkCodeBtn.style.color = "";
@@ -67,3 +75,7 @@ function getPromotionDiscount() {
 function isPromotionCodeValid() {
   return promotionCodeValid;
 }
+
+// Make functions globally accessible
+window.getPromotionDiscount = getPromotionDiscount;
+window.isPromotionCodeValid = isPromotionCodeValid;

@@ -16,6 +16,10 @@ const pizzaMenu = [
   { id: "rasberry lemonade", price: 7.99 },
   { id: "coke", price: 3.99 },
   { id: "pepsi", price: 3.99 },
+  { id: "ham sandwich", price: 8.50 },
+  { id: "grilled chicken sandwich", price: 8.50 },
+  { id: "ceasars salad", price: 6.89 },
+  { id: "mediterranean salad", price: 6.89 }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {

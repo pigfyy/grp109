@@ -148,6 +148,60 @@ main {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
+/* Carousel info section styling */
+.carousel-info {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-family: "Courier New", monospace;
+}
+
+.time-label {
+  font-weight: bold;
+  color: #ffcc00;
+  font-size: 16px;
+}
+
+.time-display {
+  background-color: #333;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #00ff88;
+  border: 2px solid #00ff88;
+  min-width: 60px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.carousel-description {
+  text-align: center;
+}
+
+.image-description {
+  margin: 0;
+  font-style: italic;
+  color: #f0f0f0;
+  font-size: 16px;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
 figure {
   width: 90%;
   border-radius: 5px;
@@ -253,24 +307,24 @@ aside:hover {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-size: 13.3px;
   color: #333;
 }
 
 #reservationForm input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 2px solid #d7af54;
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 14px;
 }
 
 #reservationForm button {
-  background-color: #4caf50;
-  color: white;
+  background-color: #d7b054;
+  color: black;
   padding: 12px 20px;
-  width: 100%;
+  float: left;
   font-size: 16px;
   margin-top: 20px;
   float: none;

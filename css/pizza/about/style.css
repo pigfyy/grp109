@@ -97,8 +97,8 @@ a:focus {
 }
 
 /* Button styling */
-#change-log-btn {
-  background-color: #D7AF54
+#change-log-btn button {
+  background-color: #D7AF54;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -106,4 +106,5 @@ a:focus {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 8px;
 }

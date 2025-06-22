@@ -1,344 +1,477 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Team Members" />
+    <link rel="stylesheet" href="../css/members/styles.css" type="text/css" />
+    <link
+      id="member-css"
+      rel="stylesheet"
+      href="../css/members/individual/ashton.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../css/pizza/universal.css" type="text/css" />
+    <title>Team Members</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="description" content="Team Members" />
-  <link rel="stylesheet" href="../css/members/styles.css" type="text/css" />
-  <link id="member-css" rel="stylesheet" href="../css/members/individual/ashton.css" type="text/css" />
-  <link rel="stylesheet" href="../css/pizza/universal.css" type="text/css" />
-  <title>Team Members</title>
-</head>
-
-<body>
-  <!-- page HTML skeleton and structure added by Franklin and modified by Divyalakshana -->
-  <!--Common drop down menu-->
-  <div class="member-selector">
-    <label for="member-dropdown">Select a Team Member:</label>
-    <select id="member-dropdown" onChange="displayInfo()">
-      <option value="ashton">Ashton Gibson</option>
-      <option value="divya">Divyalakshana Perumal Rajaram</option>
-      <option value="esal">Esal Shakil</option>
-      <option value="franklin">Franklin Zhang</option>
-    </select>
-  </div>
-  <!-- each member has their own "page"/section, remove the default-hidden class to manually show someone's page -->
-  <div id="ashton">
-    <section id="intro">
-      <h1>Ashton Gibson</h1>
-      <div class="primary-block">
-        <p class="left-float">
-          Hello! My name's Ashton. I use he/they pronouns, I'm 21, and
-          originally from Idaho. That's me in the photos, and they're just
-          about the only ones of myself I'm happy with. I think it's much
-          easier to relate to someone when you have some common ground, so let
-          me lay out some of my interests for you:
-        </p>
-      </div>
-      <div class="secondary-block">
-        <img src="../images/members/ashton/on-a-pole.jpg" alt="Me, sitting on a pole and making a surprised face" />
-        <img src="../images/members/ashton/near-a-tree.jpg" alt="Professional-style picture of me, near a tree" />
-      </div>
-      <div style="clear: both"></div>
-    </section>
-    <section id="tech-stuff">
-      <h1>Tech Stuff</h1>
-      <div class="primary-block">
-        <p>
-          I love anything and everything related to computers! I've first
-          started programming in 5th grade, and never stopped. I've made
-          everything from Unity and Unreal games to Python bots, Blender
-          addons, simple AI, and mobile apps. I've also ran servers for
-          multiple projects, both self-hosted and remote. Tech's acted as my
-          consistent interest thoughout life, and a career in the field is my
-          main ambition.
-        </p>
-      </div>
-      <div style="clear: both"></div>
-    </section>
-    <section id="music">
-      <h1>Music</h1>
-      <div class="primary-block">
-        <p>
-          I don't make music (yet), but I <i>am</i> passionate about it! I
-          primarily listen to hyperpop and some rap at the moment, with some
-          more acoustic stuff thrown in there on occasion. To start naming
-          some artists, my favorites are William Crooks, 100 gecs,
-          underscores, JPEGMAFIA, and midwxst. I've included my current two
-          favorite albums here. Left to right, they're <i>Wallsocket</i> by
-          underscores and <i>Roll With The Punches</i> by Perry Maysun.
-          They're links! Click them and skip around a bit. They're very
-          different albums.
-        </p>
-      </div>
-      <div class="secondary-block">
-        <a href="https://open.spotify.com/album/6exrhkZKAwCGoihIZDJnpv" target="_blank">
-          <img src="../images/members/ashton/wallsocket.jpg" alt="Wallsocket (cover art) by underscores" /></a>
-        <a href="https://open.spotify.com/album/2QUONqG4H8vpvVhFIObM9h" target="_blank">
-          <img src="../images/members/ashton/roll-with-the-punches.jpg"
-            alt="Roll With The Punches (cover art) by Perry Maysun" /></a>
-      </div>
-      <div style="clear: both"></div>
-    </section>
-    <section id="photography">
-      <h1>Photography</h1>
-      <div>
-        <p>
-          I'm also a hobby photographer! I prefer to shoot on film, but
-          occasionally do digital as well. I've included some of my personal
-          favorites here. You can click these, too! They'll open in a new tab.
-        </p>
-      </div>
-      <div class="photo-line">
-        <a href="../images/members/ashton/cow.jpg" target="_blank">
-          <img src="../images/members/ashton/cow.jpg" alt="A cow in a field, staring at the camera" /></a>
-        <a href="../images/members/ashton/spaceneedle.jpg" target="_blank">
-          <img src="../images/members/ashton/spaceneedle.jpg"
-            alt="A firework display at the space needle, creating the word 2024" /></a>
-        <a href="../images/members/ashton/forest.jpg" target="_blank">
-          <img src="../images/members/ashton/forest.jpg" alt="A fallen tree in a forest" /></a>
-        <a href="../images/members/ashton/mountain.jpg" target="_blank">
-          <img src="../images/members/ashton/mountain.jpg" alt="A mountain top covered in snow" /></a>
-        <a href="../images/members/ashton/kidsocean.jpg" target="_blank">
-          <img src="../images/members/ashton/kidsocean.jpg"
-            alt="Three kids in seats observing trucks near the ocean" /></a>
-      </div>
-      <div style="clear: both"></div>
-    </section>
-  </div>
-  <!-- Background info added by Divyalakshana-->
-  <div id="divya" class="default-hidden">
-    <section class="info-container">
-   <h1>A Little About Me!</h1>
-   <div class="container">
-      <div class="content">
-         <a href="../images/members/divya/srilanka2.jpg" alt="a village in srilanka with a blue three-wheeler and small buildings" target="_blank">
-         <img src="../images/members/divya/srilanka2.jpg" alt="a village in srilanka with a blue three-wheeler and small buildings"></a>
-         <p>Hi, I'm Divya! I’m originally from Sri Lanka and have deep roots in India, where I spent most of my life and completed my degree in 
-            Agricultural 
-            Sciences. After moving to the United States two years ago, I decided to take on a new challenge—transitioning into the tech field.
-         </p>
-      </div>
-      <div class="content reverse">
-         <a href="../images/members/divya/childcare_pic.jpg" alt="picture of a child and Teacher doing writing activity together" target="_blank">
-         <img src="../images/members/divya/childcare_pic.jpg" alt="picture of a child and Teacher doing writing activity together"></a>
-         <p>Before starting this journey, I worked as a Childcare Assistant Teacher. While shifting careers hasn’t been without its challenges, it’s 
-            been an exciting and rewarding experience. I’m passionate about learning, and I’m eager to grow in this new space.
-         </p>
-      </div>
-      <div class="content">
-         <a href="../images/members/divya/anthurium.jpg" alt="picture of a child and Teacher doing writing activity together" target="_blank">
-         <img src="../images/members/divya/anthurium.jpg" alt="picture of a child and Teacher doing writing activity together"></a>
-         <p>Outside of studies, I enjoy creative activities like embroidery, sewing, and clay modeling. I also love caring for indoor and ornamental 
-            plants— 
-            anthuriums are a particular favorite of mine, and I tend to a small collection in my home. This transition into tech is a big step, but it combines my 
-            curiosity, creativity, and care for growth—all of which I bring into everything I do.
-         </p>
-      </div>
-   </div>
-</section>
-  </div>
-  <!-- Esal information added -->
-  <div id="esal" class="default-hidden">
-    <section id="esal">
-      <h1>Esal Shakil</h1>
-      <div class="esal-intro">
-        <p>
-          Hi, I'm Esal (she/her). I was born in the snowy part of Canada and have called Washington
-          home since 2016. Over the past 22 years, my journey has taken me through all kinds of paths
-          with education, work, and hobbies. It's been a bit of everything, and all of it has shaped
-          who I am. Here's a little peek into my world.
-        </p>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image1.jpg" alt="Esal Profile Photo 1" />
-        <img src="../images/members/esal/image2.jpg" alt="Esal Profie Photo 2" />
-      </div>
-    </section>
-    <section id="education">
-      <h2>Education</h2>
-      <div class="esal-text-block">
-        <p>
-          I started off wanting to pursue Medicine, but then shifted my interest. I completed
-          my Bachelor's at Seattle Pacific University in Behavioral Neuroscience and Data Anlaytics.
-        </p>
-        <p>
-          That's me graduating in 2024:)
-        </p>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image3.JPG" alt="Esal Photo 3" />
-      </div>
-      <div class="esal-text-block">
-        <p>
-          Some of my highlights during my undergrad were studying abroad in South Korea.
-          For one of our activities we got to wear the Korean traditional wear, a Hanbok.
-        </p>
-      </div>
-      <div class="esal-image-block>
-        <img src="../images/members/esal/image4.jpg" alt="Esal Photo 4" />
-      </div>
-      <div class="esal-text-block">
-        <p>
-          I also enjoyed being part of a cross-cultural psychology research group. Thorugh
-          this group I got to go to a research conference in San Francisco, presenting 2
-          different posters.
-        </p>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image5.jpg" alt="Esal Photo 5" />
-      </div>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="esal-text-block">
-        <p>
-          As I am transitioning from behavioral psyhology to UX research and design, I have
-          been a part of many projects in the past year, but here is my most recent endeavor.
-        </p>      
-        <p>
-          I am starting a social media management business with my best friend
-          of 12 years. She brings her breadth of experience and knowledge in marketing and I
-          bring my expertise on the human brain together in a company called HoneyBite Studios.
-        </p>
-        <p>
-          Give us a follow to support us and see some of our work!
-        </p>
-      </div>
-      <div class="esal-image-block">
-        <p><a
-            href="https://www.instagram.com/honeybitestudios?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            <img src="../images/members/esal/image6.png" alt="Esal Photo 6" />
-          </a>
-        </p>
-      </div>
-    </section>
-    <section id="hobbies">
-      <h2>Side Quests</h2>
-      <div class="esal-text-block">
-        <p>
-          Along the way I was always keeping my hands and brain busy through various craft
-          projects. If I ever saw a piece of jewelry, clothing, or decor that I wanted, I wouldn't
-          buy it I would just learn to make it.
-        </p>
-        <h4>Crochet</h4>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image7.jpg" alt="Crochet Coasters" />
-        <img src="../images/members/esal/image8.jpg" alt="Crochet Bag" />
-        <img src="../images/members/esal/image9.jpg" alt="Crochet Scarf" />
-      </div>
-      <div class="esal-text-block">
-        <h4>Metals</h4>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image10.jpg" alt="Pearl Necklace" />
-        <img src="../images/members/esal/image11.jpg" alt="Metal Layered Earring" />
-        <img src="../images/members/esal/image12.jpg" alt="Chainmaille Earring" />
-      </div>
-      <div class="esal-text-block">
-        <h4>Nails</h4>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image13.jpg" alt="Nail Set Silver" />
-        <img src="../images/members/esal/image14.jpg" alt="Nail Set fire" />
-        <img src="../images/members/esal/image15.jpg" alt="Nail Set Cross-stitch" />
-      </div>
-      <div class="esal-text-block">
-        <h4>Henna</h4>
-      </div>
-      <div class="esal-image-block">
-        <img src="../images/members/esal/image16.jpg" alt="Henna 1" />
-        <img src="../images/members/esal/image17.jpg" alt="Henna 2" />
-        <img src="../images/members/esal/image18.jpg" alt="Henna 3" />
-      </div>
-    </section>
-  </div>
-  <!-- Franklin member section added by Franklin -->
-  <div id="franklin" class="default-hidden">
-    <!-- intro section, name and pictures -->
-    <section id="franklin-intro">
-      <div class="intro-content">
-        <div class="intro-text">
-          <h1>Hi, I'm Franklin</h1>
-          <p>I'm currently a Running Start student at Bellevue College.</p>
+  <body>
+    <!-- page HTML skeleton and structure added by Franklin and modified by Divyalakshana -->
+    <!--Common drop down menu-->
+    <div class="member-selector">
+      <label for="member-dropdown">Select a Team Member:</label>
+      <select id="member-dropdown" onChange="displayInfo()">
+        <option value="ashton">Ashton Gibson</option>
+        <option value="divya">Divyalakshana Perumal Rajaram</option>
+        <option value="esal">Esal Shakil</option>
+        <option value="franklin">Franklin Zhang</option>
+      </select>
+    </div>
+    <!-- each member has their own "page"/section, remove the default-hidden class to manually show someone's page -->
+    <div id="ashton">
+      <section id="intro">
+        <h1>Ashton Gibson</h1>
+        <div class="primary-block">
+          <p class="left-float">
+            Hello! My name's Ashton. I use he/they pronouns, I'm 21, and
+            originally from Idaho. That's me in the photos, and they're just
+            about the only ones of myself I'm happy with. I think it's much
+            easier to relate to someone when you have some common ground, so let
+            me lay out some of my interests for you:
+          </p>
         </div>
-        <div class="image-container">
-          <img src="../images/members/franklin/image0.jpg" alt="Franklin Photo 1" />
-          <img src="../images/members/franklin/image1.jpg" alt="Franklin Photo 2" />
+        <div class="secondary-block">
+          <img
+            src="../images/members/ashton/on-a-pole.jpg"
+            alt="Me, sitting on a pole and making a surprised face"
+          />
+          <img
+            src="../images/members/ashton/near-a-tree.jpg"
+            alt="Professional-style picture of me, near a tree"
+          />
         </div>
-      </div>
-    </section>
-    <!-- hobbies, including skiing and traveling (pictures for both) -->
-    <section id="franklin-hobbies">
-      <h2>Hobbies</h2>
-      <div class="hobby-section">
-        <div class="hobby-content">
-          <div class="hobby-text">
-            <h3>Skiing</h3>
-            <p>I've been skiing since I was only 6 years old. I spent winter breaks at Lake Tahoe when I lived in
-              California, and I now reguarly ski at Crystal Mountain.</p>
+        <div style="clear: both"></div>
+      </section>
+      <section id="tech-stuff">
+        <h1>Tech Stuff</h1>
+        <div class="primary-block">
+          <p>
+            I love anything and everything related to computers! I've first
+            started programming in 5th grade, and never stopped. I've made
+            everything from Unity and Unreal games to Python bots, Blender
+            addons, simple AI, and mobile apps. I've also ran servers for
+            multiple projects, both self-hosted and remote. Tech's acted as my
+            consistent interest thoughout life, and a career in the field is my
+            main ambition.
+          </p>
+        </div>
+        <div style="clear: both"></div>
+      </section>
+      <section id="music">
+        <h1>Music</h1>
+        <div class="primary-block">
+          <p>
+            I don't make music (yet), but I <i>am</i> passionate about it! I
+            primarily listen to hyperpop and some rap at the moment, with some
+            more acoustic stuff thrown in there on occasion. To start naming
+            some artists, my favorites are William Crooks, 100 gecs,
+            underscores, JPEGMAFIA, and midwxst. I've included my current two
+            favorite albums here. Left to right, they're <i>Wallsocket</i> by
+            underscores and <i>Roll With The Punches</i> by Perry Maysun.
+            They're links! Click them and skip around a bit. They're very
+            different albums.
+          </p>
+        </div>
+        <div class="secondary-block">
+          <a
+            href="https://open.spotify.com/album/6exrhkZKAwCGoihIZDJnpv"
+            target="_blank"
+          >
+            <img
+              src="../images/members/ashton/wallsocket.jpg"
+              alt="Wallsocket (cover art) by underscores"
+          /></a>
+          <a
+            href="https://open.spotify.com/album/2QUONqG4H8vpvVhFIObM9h"
+            target="_blank"
+          >
+            <img
+              src="../images/members/ashton/roll-with-the-punches.jpg"
+              alt="Roll With The Punches (cover art) by Perry Maysun"
+          /></a>
+        </div>
+        <div style="clear: both"></div>
+      </section>
+      <section id="photography">
+        <h1>Photography</h1>
+        <div>
+          <p>
+            I'm also a hobby photographer! I prefer to shoot on film, but
+            occasionally do digital as well. I've included some of my personal
+            favorites here. You can click these, too! They'll open in a new tab.
+          </p>
+        </div>
+        <div class="photo-line">
+          <a href="../images/members/ashton/cow.jpg" target="_blank">
+            <img
+              src="../images/members/ashton/cow.jpg"
+              alt="A cow in a field, staring at the camera"
+          /></a>
+          <a href="../images/members/ashton/spaceneedle.jpg" target="_blank">
+            <img
+              src="../images/members/ashton/spaceneedle.jpg"
+              alt="A firework display at the space needle, creating the word 2024"
+          /></a>
+          <a href="../images/members/ashton/forest.jpg" target="_blank">
+            <img
+              src="../images/members/ashton/forest.jpg"
+              alt="A fallen tree in a forest"
+          /></a>
+          <a href="../images/members/ashton/mountain.jpg" target="_blank">
+            <img
+              src="../images/members/ashton/mountain.jpg"
+              alt="A mountain top covered in snow"
+          /></a>
+          <a href="../images/members/ashton/kidsocean.jpg" target="_blank">
+            <img
+              src="../images/members/ashton/kidsocean.jpg"
+              alt="Three kids in seats observing trucks near the ocean"
+          /></a>
+        </div>
+        <div style="clear: both"></div>
+      </section>
+    </div>
+    <!-- Background info added by Divyalakshana-->
+    <div id="divya" class="default-hidden">
+      <section class="info-container">
+        <h1>A Little About Me!</h1>
+        <div class="container">
+          <div class="content">
+            <a href="../images/members/divya/srilanka2.jpg" target="_blank">
+              <img
+                src="../images/members/divya/srilanka2.jpg"
+                alt="a village in srilanka with a blue three-wheeler and small buildings"
+            /></a>
+            <p>
+              Hi, I'm Divya! I’m originally from Sri Lanka and have deep roots
+              in India, where I spent most of my life and completed my degree in
+              Agricultural Sciences. After moving to the United States two years
+              ago, I decided to take on a new challenge—transitioning into the
+              tech field.
+            </p>
+          </div>
+          <div class="content reverse">
+            <a href="../images/members/divya/childcare_pic.jpg" target="_blank">
+              <img
+                src="../images/members/divya/childcare_pic.jpg"
+                alt="picture of a child and Teacher doing writing activity together"
+            /></a>
+            <p>
+              Before starting this journey, I worked as a Childcare Assistant
+              Teacher. While shifting careers hasn’t been without its
+              challenges, it’s been an exciting and rewarding experience. I’m
+              passionate about learning, and I’m eager to grow in this new
+              space.
+            </p>
+          </div>
+          <div class="content">
+            <a href="../images/members/divya/anthurium.jpg" target="_blank">
+              <img
+                src="../images/members/divya/anthurium.jpg"
+                alt="picture of a child and Teacher doing writing activity together"
+            /></a>
+            <p>
+              Outside of studies, I enjoy creative activities like embroidery,
+              sewing, and clay modeling. I also love caring for indoor and
+              ornamental plants— anthuriums are a particular favorite of mine,
+              and I tend to a small collection in my home. This transition into
+              tech is a big step, but it combines my curiosity, creativity, and
+              care for growth—all of which I bring into everything I do.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Esal information added -->
+    <div id="esal" class="default-hidden">
+      <section>
+        <h1>Esal Shakil</h1>
+        <div class="esal-intro">
+          <p>
+            Hi, I'm Esal (she/her). I was born in the snowy part of Canada and
+            have called Washington home since 2016. Over the past 22 years, my
+            journey has taken me through all kinds of paths with education,
+            work, and hobbies. It's been a bit of everything, and all of it has
+            shaped who I am. Here's a little peek into my world.
+          </p>
+        </div>
+        <div class="esal-image-block">
+          <img
+            src="../images/members/esal/image1.jpg"
+            alt="Esal Profile Photo 1"
+          />
+          <img
+            src="../images/members/esal/image2.jpg"
+            alt="Esal Profie Photo 2"
+          />
+        </div>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <div class="esal-text-block">
+          <p>
+            I started off wanting to pursue Medicine, but then shifted my
+            interest. I completed my Bachelor's at Seattle Pacific University in
+            Behavioral Neuroscience and Data Anlaytics.
+          </p>
+          <p>That's me graduating in 2024:)</p>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image3.JPG" alt="Esal Photo 3" />
+        </div>
+        <div class="esal-text-block">
+          <p>
+            Some of my highlights during my undergrad were studying abroad in
+            South Korea. For one of our activities we got to wear the Korean
+            traditional wear, a Hanbok.
+          </p>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image4.jpg" alt="Esal Photo 4" />
+        </div>
+        <div class="esal-text-block">
+          <p>
+            I also enjoyed being part of a cross-cultural psychology research
+            group. Thorugh this group I got to go to a research conference in
+            San Francisco, presenting 2 different posters.
+          </p>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image5.jpg" alt="Esal Photo 5" />
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="esal-text-block">
+          <p>
+            As I am transitioning from behavioral psyhology to UX research and
+            design, I have been a part of many projects in the past year, but
+            here is my most recent endeavor.
+          </p>
+          <p>
+            I am starting a social media management business with my best friend
+            of 12 years. She brings her breadth of experience and knowledge in
+            marketing and I bring my expertise on the human brain together in a
+            company called HoneyBite Studios.
+          </p>
+          <p>Give us a follow to support us and see some of our work!</p>
+        </div>
+        <div class="esal-image-block">
+          <p>
+            <a
+              href="https://www.instagram.com/honeybitestudios?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            >
+              <img src="../images/members/esal/image6.png" alt="Esal Photo 6" />
+            </a>
+          </p>
+        </div>
+      </section>
+      <section id="hobbies">
+        <h2>Side Quests</h2>
+        <div class="esal-text-block">
+          <p>
+            Along the way I was always keeping my hands and brain busy through
+            various craft projects. If I ever saw a piece of jewelry, clothing,
+            or decor that I wanted, I wouldn't buy it I would just learn to make
+            it.
+          </p>
+          <h4>Crochet</h4>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image7.jpg" alt="Crochet Coasters" />
+          <img src="../images/members/esal/image8.jpg" alt="Crochet Bag" />
+          <img src="../images/members/esal/image9.jpg" alt="Crochet Scarf" />
+        </div>
+        <div class="esal-text-block">
+          <h4>Metals</h4>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image10.jpg" alt="Pearl Necklace" />
+          <img
+            src="../images/members/esal/image11.jpg"
+            alt="Metal Layered Earring"
+          />
+          <img
+            src="../images/members/esal/image12.jpg"
+            alt="Chainmaille Earring"
+          />
+        </div>
+        <div class="esal-text-block">
+          <h4>Nails</h4>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image13.jpg" alt="Nail Set Silver" />
+          <img src="../images/members/esal/image14.jpg" alt="Nail Set fire" />
+          <img
+            src="../images/members/esal/image15.jpg"
+            alt="Nail Set Cross-stitch"
+          />
+        </div>
+        <div class="esal-text-block">
+          <h4>Henna</h4>
+        </div>
+        <div class="esal-image-block">
+          <img src="../images/members/esal/image16.jpg" alt="Henna 1" />
+          <img src="../images/members/esal/image17.jpg" alt="Henna 2" />
+          <img src="../images/members/esal/image18.jpg" alt="Henna 3" />
+        </div>
+      </section>
+    </div>
+    <!-- Franklin member section added by Franklin -->
+    <div id="franklin" class="default-hidden">
+      <!-- intro section, name and pictures -->
+      <section id="franklin-intro">
+        <div class="intro-content">
+          <div class="intro-text">
+            <h1>Hi, I'm Franklin</h1>
+            <p>I'm currently a Running Start student at Bellevue College.</p>
           </div>
           <div class="image-container">
-            <img src="../images/members/franklin/image2.jpg" alt="Skiing at Crystal Mountain" />
+            <img
+              src="../images/members/franklin/image0.jpg"
+              alt="Franklin Photo 1"
+            />
+            <img
+              src="../images/members/franklin/image1.jpg"
+              alt="Franklin Photo 2"
+            />
           </div>
         </div>
-      </div>
-      <div class="hobby-section">
-        <h3>Traveling</h3>
-        <p>I've always enjoyed traveling and seeing the world. I recently went to the East Carribean.</p>
-        <div class="image-container travel-images">
-          <img src="../images/members/franklin/image3.jpg" alt="Canoeing in a lake" />
-          <img src="../images/members/franklin/image4.jpg" alt="Holding a jellyfish" />
-          <img src="../images/members/franklin/image5.jpg" alt="Island scenary" />
-        </div>
-      </div>
-    </section>
-    <!-- my technical background with coding, listing technologies i've worked with and also recent projects -->
-    <section id="franklin-coding">
-      <h2>Tech and Coding</h2>
-      <div class="tech-background">
-        <p>I started coding with Java and Python, learning basic competitive programming, but I found my passion in web
-          development.</p>
-
-        <h3>Technologies I Work With</h3>
-        <div class="tech-icons">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-            title="HTML5" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-            title="CSS3" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JavaScript" title="JavaScript" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript" title="TypeScript" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
-            title="Next.js" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-            title="Node.js" />
-          <img src="../images/members/franklin/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
-        </div>
-
-        <h3>Recent Projects</h3>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h4>30 Day Me</h4>
-            <p>An intuitive app designed for creating and tracking 30-day challenges easily. Whether you're building new
-              habits or breaking old ones, 30 Day Me helps you stay on track.</p>
-            <a href="https://30day.me" target="_blank" class="project-link">Visit 30day.me →</a>
-          </div>
-          <div class="project-card">
-            <h4>Remember This</h4>
-            <p>A smart photo-based memory tool that helps you remember life's important details. Perfect for remembering
-              where you parked, where you left your keys, or any other visual memory you want to keep track of.</p>
-            <a href="https://www.youtube.com/watch?v=BopR1Pl4DY0" target="_blank" class="project-link">Watch Demo →</a>
+      </section>
+      <!-- hobbies, including skiing and traveling (pictures for both) -->
+      <section id="franklin-hobbies">
+        <h2>Hobbies</h2>
+        <div class="hobby-section">
+          <div class="hobby-content">
+            <div class="hobby-text">
+              <h3>Skiing</h3>
+              <p>
+                I've been skiing since I was only 6 years old. I spent winter
+                breaks at Lake Tahoe when I lived in California, and I now
+                reguarly ski at Crystal Mountain.
+              </p>
+            </div>
+            <div class="image-container">
+              <img
+                src="../images/members/franklin/image2.jpg"
+                alt="Skiing at Crystal Mountain"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+        <div class="hobby-section">
+          <h3>Traveling</h3>
+          <p>
+            I've always enjoyed traveling and seeing the world. I recently went
+            to the East Carribean.
+          </p>
+          <div class="image-container travel-images">
+            <img
+              src="../images/members/franklin/image3.jpg"
+              alt="Canoeing in a lake"
+            />
+            <img
+              src="../images/members/franklin/image4.jpg"
+              alt="Holding a jellyfish"
+            />
+            <img
+              src="../images/members/franklin/image5.jpg"
+              alt="Island scenary"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- my technical background with coding, listing technologies i've worked with and also recent projects -->
+      <section id="franklin-coding">
+        <h2>Tech and Coding</h2>
+        <div class="tech-background">
+          <p>
+            I started coding with Java and Python, learning basic competitive
+            programming, but I found my passion in web development.
+          </p>
 
-  <script src="../js/members_script.js"></script>
-  <script src="../js/universal.js"></script>
-</body>
+          <h3>Technologies I Work With</h3>
+          <div class="tech-icons">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+              title="HTML5"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+              title="CSS3"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              title="JavaScript"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+              title="TypeScript"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+              alt="Next.js"
+              title="Next.js"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              title="Node.js"
+            />
+            <img
+              src="../images/members/franklin/tailwind.svg"
+              alt="Tailwind CSS"
+              title="Tailwind CSS"
+            />
+          </div>
 
+          <h3>Recent Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h4>30 Day Me</h4>
+              <p>
+                An intuitive app designed for creating and tracking 30-day
+                challenges easily. Whether you're building new habits or
+                breaking old ones, 30 Day Me helps you stay on track.
+              </p>
+              <a href="https://30day.me" target="_blank" class="project-link"
+                >Visit 30day.me →</a
+              >
+            </div>
+            <div class="project-card">
+              <h4>Remember This</h4>
+              <p>
+                A smart photo-based memory tool that helps you remember life's
+                important details. Perfect for remembering where you parked,
+                where you left your keys, or any other visual memory you want to
+                keep track of.
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=BopR1Pl4DY0"
+                target="_blank"
+                class="project-link"
+                >Watch Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="../js/members_script.js"></script>
+    <script src="../js/universal.js"></script>
+  </body>
 </html>

@@ -2,6 +2,66 @@ body {
   background-image: url("../../../images/pizza/universal/background-green.png");
 }
 
+/* General link styling with mouse effects */
+a {
+  color: #58314a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #764f36;
+  text-decoration: underline;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+a:visited {
+  color: #7a4b5d;
+}
+
+a:active {
+  color: #3d1f2a;
+  transform: translateY(1px);
+}
+
+a:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
+}
+
+/* Blinking animation for promotional elements */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.promo-blink {
+  animation: blink 2s infinite;
+}
+
+/* Pulse animation for important buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
 /* code to remove the automatic increment decrement buttons on the input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -178,6 +238,18 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.quantity-selector .quantity-input:hover {
+  border-color: #58314a;
+  box-shadow: 0 0 5px rgba(88, 49, 74, 0.2);
+}
+
+.quantity-selector .quantity-input:focus {
+  outline: none;
+  border-color: #58314a;
+  box-shadow: 0 0 8px rgba(88, 49, 74, 0.3);
 }
 
 /* the quantity buttons need to be a square */
@@ -191,11 +263,24 @@ input[type="number"] {
   color: #fff;
   font-size: 1.5em;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.quantity-selector .quantity-btn:hover {
+  background-color: #a01212;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(120, 14, 14, 0.3);
 }
 
 /* adds different color when the button is actively pressed */
 .quantity-selector .quantity-btn:active {
-  background-color: #ddd;
+  background-color: #5a0a0a;
+  transform: scale(0.95);
+}
+
+.quantity-selector .quantity-btn:focus {
+  outline: 2px solid #780e0e;
+  outline-offset: 2px;
 }
 
 #submit-order {
@@ -365,11 +450,24 @@ input[type="number"] {
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background-color 150ms;
+  transition: all 0.3s ease;
+}
+
+.return-menu-btn:hover {
+  background-color: #c09d47;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .return-menu-btn:active {
   background-color: #764f3681;
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.return-menu-btn:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
 }
 
 .checkout-title {
@@ -643,7 +741,7 @@ body {
   cursor: pointer;
   border-radius: 4px;
   font-weight: bold;
-  transistion: background 0.3s;
+  transition: all 0.3s ease;
   border: 1px solid;
   color: rgb(118, 79, 54);
   font-size: 1.6em;
@@ -653,13 +751,29 @@ body {
   margin-top: 200px;
   scroll-margin-top: 200px;
 }
+
 .category-tab:hover {
   background-color: #e0e0e0;
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: #58314a;
+}
+
+.category-tab:active {
+  transform: translateX(1px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .category-tab.active {
-  background-color: darkred;
+  background-color: #58314a;
   color: floralwhite;
+  transform: translateX(5px);
+  box-shadow: 0 3px 12px rgba(88, 49, 74, 0.3);
+}
+
+.category-tab:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
 }
 /*Side bar styles ends here*/
 
@@ -785,12 +899,24 @@ body {
   padding: 4px 8px;
   cursor: pointer;
   font-family: cursive, serif;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .remove-item-btn:hover {
   background-color: #780e0e;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(120, 14, 14, 0.3);
+}
+
+.remove-item-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(120, 14, 14, 0.2);
+}
+
+.remove-item-btn:focus {
+  outline: 2px solid #780e0e;
+  outline-offset: 2px;
 }
 
 /* Order summary */
@@ -853,11 +979,24 @@ body {
   padding-right: 20px;
   margin-top: 5%;
   margin-bottom: 1%;
-  transition: background-color 150ms;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #c09d47;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .checkout-btn:active {
   background-color: #764f3681;
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-btn:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
 }
 
 /* Responsive utilities */
@@ -1156,12 +1295,25 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  transition: background-color 150ms;
+  transition: all 0.3s ease;
   font-size: 13.3px;
+}
+
+.submit-order-btn:hover {
+  background-color: #c09d47;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .submit-order-btn:active {
   background-color: #764f3681;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-order-btn:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
 }
 
 .order-confirmation {
@@ -1276,12 +1428,24 @@ body {
   padding: 4px 8px;
   cursor: pointer;
   font-family: cursive, serif;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .remove-item-btn-js:hover {
   background-color: #780e0e;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(120, 14, 14, 0.3);
+}
+
+.remove-item-btn-js:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(120, 14, 14, 0.2);
+}
+
+.remove-item-btn-js:focus {
+  outline: 2px solid #780e0e;
+  outline-offset: 2px;
 }
 
 /* Additional JavaScript element classes */

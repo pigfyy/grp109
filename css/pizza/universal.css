@@ -2,81 +2,151 @@
     All pages are a group effort and have multiple contributors */
 
 main {
-    margin-top: 12em;
+  margin-top: 12em;
 }
 
-/* Generic navigation button */
+/* Generic navigation button with enhanced mouse effects */
 button {
-    background-color: #d7b054;
-    border-radius: 5%;
+  background-color: #d7b054;
+  border-radius: 5%;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(215, 176, 84, 0.3);
+  background-color: #c09d47;
 }
 
 button:active {
-    background-color: #764f3681;
+  background-color: #764f3681;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(118, 79, 54, 0.2);
+}
+
+button:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
+}
+
+/* General link styling with mouse effects */
+a {
+  color: #58314a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #764f36;
+  text-decoration: underline;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+a:visited {
+  color: #7a4b5d;
+}
+
+a:active {
+  color: #3d1f2a;
+  transform: translateY(1px);
+}
+
+a:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
 }
 
 /* Top section of header */
 /*  h1 and h3 need to be defined separately, as otherwise
     simply making the text hx overwrites them */
-header h1, h3 {
-    font-family: "AucaRegular";
-    font-weight: normal;
-    padding-left: 15px;
+header h1,
+h3 {
+  font-family: "AucaRegular";
+  font-weight: normal;
+  padding-left: 15px;
 }
 
 header h1 {
-    font-size: 2.5em;
-    line-height: 0;
+  font-size: 2.5em;
+  line-height: 0;
 }
 
 header {
-    background-color: #58314a;
-    color: floralwhite;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Added for choose your own pizza */
+  background-color: #58314a;
+  color: floralwhite;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Added for choose your own pizza */
 }
 
 /* Lower section of header */
 header nav {
-    background-color: white;
-    font-size: 32px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  font-size: 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    text-align: center;
-    height: 60px;
+  text-align: center;
+  height: 60px;
 }
 
 header nav ul li {
-    display: inline-block;
-    line-height: 25px;
-    padding: 0.5em;
+  display: inline-block;
+  line-height: 25px;
+  padding: 0.5em;
+  transition: all 0.3s ease;
+}
+
+header nav ul li:hover {
+  transform: translateY(-1px);
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 
 header a {
-    color: #764f36;
-    text-decoration: none;
+  color: #764f36;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  color: #58314a;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header a:focus {
+  outline: 2px solid #58314a;
+  outline-offset: 2px;
 }
 
 .active-url {
-    background-color: #ffe2d1;
-    border: 1px dotted #764f36;
+  background-color: #ffe2d1;
+  border: 1px dotted #764f36;
+  transition: all 0.3s ease;
+}
+
+.active-url:hover {
+  background-color: #ffd4b8;
+  border-color: #58314a;
+  transform: scale(1.02);
 }
 
 /* FOOTER */
 footer {
-    background-color: #58314a;
-    box-sizing: border-box;
-    color: #faf9f7;
-    text-align: center;
-    width: 100%;
-    bottom: 0;
-    line-height: 1.5em;
+  background-color: #58314a;
+  box-sizing: border-box;
+  color: #faf9f7;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  line-height: 1.5em;
 }
-  
+
 footer a {
-    display: inline-block;
-    height: 44px;
+  display: inline-block;
+  height: 44px;
 }

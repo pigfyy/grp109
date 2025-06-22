@@ -238,23 +238,9 @@ aside:hover {
   float: right;
   font-size: 28px;
   font-weight: bold;
-  cursor: pointer;
   position: absolute;
   right: 15px;
   top: 10px;
-  transition: all 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  transform: scale(1.2);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.close:active {
-  transform: scale(0.9);
 }
 
 #reservationForm h2 {
@@ -284,31 +270,11 @@ aside:hover {
   background-color: #4caf50;
   color: white;
   padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
   width: 100%;
   font-size: 16px;
   margin-top: 20px;
   float: none;
   margin-right: 0;
-  transition: all 0.3s ease;
-}
-
-#reservationForm button:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
-
-#reservationForm button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.2);
-}
-
-#reservationForm button:focus {
-  outline: 2px solid #4caf50;
-  outline-offset: 2px;
 }
 
 #confirmationMessage {
@@ -325,25 +291,5 @@ aside:hover {
   background-color: #333;
   color: white;
   padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
   margin-top: 15px;
-  transition: all 0.3s ease;
-}
-
-#confirmationMessage button:hover {
-  background-color: #555;
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(51, 51, 51, 0.3);
-}
-
-#confirmationMessage button:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 4px rgba(51, 51, 51, 0.2);
-}
-
-#confirmationMessage button:focus {
-  outline: 2px solid #333;
-  outline-offset: 2px;
 }

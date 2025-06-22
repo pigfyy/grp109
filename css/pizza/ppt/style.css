@@ -18,6 +18,10 @@ body {
   border-radius: 8px;
   padding: 2.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Title Banners */
@@ -32,4 +36,5 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: none;
   text-align: center;
+  width: 100%;
 }

@@ -9,7 +9,7 @@
   margin: 30px;
 }
 
-.develepors-box-container {
+#develepors-box-container {
   display: flex;
   justify-content: center;
   align-items: center;

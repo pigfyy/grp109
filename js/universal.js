@@ -15,8 +15,8 @@ header.innerHTML = `
         <li><a href="/grp109/pizza/home/">Menu</a></li>
         <li><a href="/grp109/pizza/about/">About</a></li>
         <li><a href="/grp109/members">Team Members</a></li>
-        <li><a href="/grp109/pizza/goal/">Goal</a><li>
-        <li><a href="/grp109/pizza/ppt/">PPTS</a><li>
+        <li><a href="/grp109/pizza/goal/">Goal</a></li>
+        <li><a href="/grp109/pizza/ppt/">PPTS</a></li>
     </ul>
 </nav>
 `;

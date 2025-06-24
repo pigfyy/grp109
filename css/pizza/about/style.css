@@ -122,3 +122,28 @@ a:focus {
   box-shadow: 0 0 5px #c49f3e;
 }
 
+#validation-tracker-btn {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+#validation-tracker-btn button {
+  background-color: #D7AF54;
+  border: none;
+  color: black;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#validation-tracker-btn button:hover,
+#validation-tracker-btn button:focus {
+  background-color: #c49f3e; /* Slightly darker gold */
+  outline: none;
+  box-shadow: 0 0 5px #c49f3e;
+}
+
